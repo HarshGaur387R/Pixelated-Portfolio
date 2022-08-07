@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Pixeboy-z8XGD';
+    src: url('pixeboy-font/Pixeboy-z8XGD.ttf');
+}
+
+body{
+    background-color: rgb(48, 45, 45);
+}
+
+/* #imageBox{
+    border: 2px solid black;
+    width: 100vw;
+} */
+
+#navbarHolder{
+    z-index: 9;
+}
+
+#hamburger {
+    display: none;
+}
+
+#cross{
+    display: none;
+}
+
+#sidebar {
+    display: none;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+
+#home {
+    color: yellow;
+    height: 100vh;
+    margin-top: 50px;
+    padding: 16px;
+}
+
+#navbar {
+    font-family: 'Pixeboy-z8XGD';
+    background-color: rgb(32, 28, 28);
+    color: yellow;
+}
+
+#navbar ul {
+    overflow: auto;
+    overflow: hidden;
+}
+
+#navbar li {
+    float: left;
+    list-style: none;
+    margin: 15px 3px;
+
+}
+
+#navbar li a {
+    background-color: rgb(48, 45, 45);
+    color: yellow;
+    padding: 10px 36px;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+
+    box-shadow: -2px 0 0 0 black,
+        2px 0 0 0 black,
+        0 -2px 0 0 black,
+        0 2px 0 0 black;
+
+    border-right: 4px solid rgb(18, 18, 18);
+    border-top: 4px solid rgb(69, 67, 67);
+    border-bottom: 4px solid rgb(18, 18, 18);
+}
+
+#navbar a:hover {
+
+    background-color: rgb(29, 25, 25);
+
+    color: yellow;
+    text-shadow: 1px 1px 20px rgb(255, 255, 0);
+
+}
+
+#navbar a:active {
+    border-left: 3px solid rgb(255, 255, 165);
+    background-color: rgb(23, 20, 20);
+
+    border-right: 4px solid rgb(29, 25, 25);
+    border-top: 4px solid rgb(29, 25, 25);
+    border-bottom: 4px solid rgb(29, 25, 25);
+
+}
+
+
+@media screen and (max-width: 850px) {
+    /* @font-face {
+        font-family: 'Pixeboy-z8XGD';
+        src: url('pixeboy-font/Pixeboy-z8XGD.ttf');
+    } */
+
+    header nav ul{
+        display: none;
+    }
+
+    #container {
+        font-family: 'Pixeboy-z8XGD';
+        display: flex;
+        height: 100vh;
+    }
+
+    #sidebar {
+        translate:-200px;
+        display: unset;
+        overflow-y: scroll; 
+        overflow-x: scroll;
+        /* color: yellow; */
+        color: gray;
+        position:fixed;
+        height: 100%;
+        width: 170px;
+        background-color: rgb(32, 28, 28);
+        transition: 0.1s;
+    }
+
+    #sidebar li {
+        line-height: 20px;
+        text-align: center;
+        display: block;
+        margin: 24px;
+        padding: 20px;
+        list-style: none;
+        transition: .2s;
+
+
+        border-right: 4px solid rgb(18, 18, 18);
+        border-top: 4px solid rgb(69, 67, 67);
+        border-bottom: 4px solid rgb(18, 18, 18);
+
+        box-shadow: -3px 0 0 0 black,
+            3px 0 0 0 black,
+            0 -3px 0 0 black,
+            0 3px 0 0 black;
+
+    }
+
+
+    #sidebar li:hover {
+        /* line-height: 22px; */
+        background-color: rgb(29, 25, 25);
+        color: yellow;
+        text-shadow: 1px 3px 20px rgb(255, 255, 115);
+
+        border-top: 3px solid rgb(44, 44, 44);
+        border-right: 3px solid rgb(18, 18, 18);
+        border-bottom: 3px solid rgb(18, 18, 18);
+
+        box-shadow: -2px 0 0 0 black,
+            2px 0 0 0 black,
+            0 -2px 0 0 black,
+            0 2px 0 0 black;
+
+
+    }
+
+
+    #sidebar li:active {
+        color: yellow;
+        text-shadow: 1px 3px 20px rgb(255, 255, 115);
+        background-color: rgb(23, 20, 20);
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-right: 4px solid rgb(20, 17, 17);
+        border-bottom: 4px solid rgb(20, 17, 17);
+
+        box-shadow: -2px 0 0 0 black,
+            -2px 0 0 0 black,
+            0 -2px 0 0 black,
+            0 0 0 0 black
+    }
+
+
+    #cross{
+        display: unset;
+        transform: translateX(-200px);
+        width: 39px;
+        margin-left: -42px;
+        margin-top: 0px;
+    }
+
+    #hamburger {
+        display: unset;
+        margin-top: 1px;
+        width: 40px;
+        position: inherit;
+    }
+
+    #home {
+        border: 2px solid;
+        margin: auto;
+        align-items: center;
+        height: 100vh;
+        margin-top: 50px;
+        padding: 16px;
+    }
+
+    #main{
+        margin: auto;
+    }
+
+    #imageBox img{
+        border:2px solid yellow; 
+        border-radius: 150px;
+        box-shadow: 8px 6px 0 5px black;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    
+   #main{
+    margin: 20px;
+   }
+}
