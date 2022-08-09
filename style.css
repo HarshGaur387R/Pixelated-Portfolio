@@ -207,7 +207,8 @@ header {
         border: 2px solid;
         margin: auto;
         align-items: center;
-        height: 100vh;
+        /* height: 100vh; */
+        height: 500px;
         margin-top: 50px;
         padding: 16px;
     }
@@ -219,12 +220,46 @@ header {
     #imageBox img{
         border:2px solid yellow; 
         border-radius: 150px;
-        box-shadow: 8px 6px 0 5px black;
+        /* box-shadow: 8px 6px 0 5px black; */
     }
+
+    #boxesWrapper{
+        
+        /* color: rgb(255, 255, 165); */
+        color: yellow;
+        text-shadow: -1px 1px 10px yellow;
+
+        font-size: 1.5em;
+        margin-top: 15px;
+        
+        /* background-color: rgba(56, 98, 60, 0.164); */
+        background-color: #1f1f1f;
+
+        border-left: 4px solid #000000;
+        border-right: 4px solid #1f1f1f;
+        border-top: 4px solid #000000;
+        border-bottom: 4px solid #1f1f1f;
+    }
+
+    #nameBox{
+        /* transition: .2s; */
+        margin-top: 5px;
+    }
+    
+    #fieldBox{
+        font-size: 0.6em;
+        margin-top: 5px;
+        margin-bottom: 9px;
+    }
+
+    #descriptBox{
+        margin-bottom: 5px;
+    }
+   
 }
 
 
-@media screen and (max-width:600px){
+@media screen and (max-width:850px){
     
    #main{
     margin: 20px;
