@@ -208,8 +208,8 @@ header {
         margin: auto;
         align-items: center;
         
-        /* height: 100vh; */
-        height: 500px;
+        height: 550px;
+        /* height: 30em; */
         margin-top: 50px;
         padding: 16px;
 
@@ -232,7 +232,7 @@ header {
     #imageBox img{
         border:2px solid yellow; 
         border-radius: 150px;
-        /* box-shadow: 8px 6px 0 5px black; */
+        box-shadow: -3px -3px 0 5px rgb(63, 63, 63);
     }
 
     #boxesWrapper{
@@ -254,9 +254,18 @@ header {
     }
 
     #boxesWrapper img{
-        margin-top: 20px;
+        margin: 20px 10px 5px;
         padding: 2%;
         width: 0.5em;
+        
+        border-top: 3px solid rgb(44, 44, 44);
+        border-right: 3px solid rgb(18, 18, 18);
+        border-bottom: 3px solid rgb(18, 18, 18);
+
+        box-shadow: -2px 0 0 0 black,
+            2px 0 0 0 black,
+            0 -2px 0 0 black,
+            0 2px 0 0 black;
     }
 
     #nameBox{
@@ -270,6 +279,7 @@ header {
     }
 
     #descriptBox{
+        line-height: 18px;
         margin-left: 5px;
         margin-right: 5px;
         font-size: 0.8em;
