@@ -257,6 +257,7 @@ header {
         padding: 2%;
         width: 0.5em;
 
+        border-left: 3px solid transparent;
         border-top: 3px solid rgb(44, 44, 44);
         border-right: 3px solid rgb(18, 18, 18);
         border-bottom: 3px solid rgb(18, 18, 18);
@@ -265,6 +266,20 @@ header {
             2px 0 0 0 black,
             0 -2px 0 0 black,
             0 2px 0 0 black;
+    }
+
+    #boxesWrapper img:hover {
+        background-color: rgb(24, 21, 21);
+        text-shadow: 1px 1px 20px rgb(255, 255, 0);
+    }
+
+    #boxesWrapper img:active {
+        border-left: 3px solid rgb(255, 255, 165);
+        background-color: rgb(23, 20, 20);
+
+        border-right: 3px solid rgb(29, 25, 25);
+        border-top: 3px solid rgb(29, 25, 25);
+        border-bottom: 3px solid rgb(29, 25, 25);
     }
 
     #nameBox {
@@ -285,6 +300,36 @@ header {
         margin-bottom: 5px;
     }
 
+    #myIntro {
+        color: yellow;
+        border: 2px solid;
+        margin: auto;
+        align-items: center;
+
+        height: 550px;
+        /* height: 30em; */
+        margin-top: 50px;
+        padding: 16px;
+
+        border-left: 2px solid yellow;
+        /* border-left: 4px solid #505050; */
+        border-right: 10px solid rgb(18, 18, 18);
+        border-top: 10px solid rgb(69, 67, 67);
+        border-bottom: 10px solid rgb(18, 18, 18);
+
+        box-shadow: -6px 0 0 0 black,
+            6px 0 0 0 black,
+            0 -6px 0 0 black,
+            0 6px 0 0 black
+    }
+
+    #descriptionInDetail {
+        line-height: 18px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
 
 }
 
