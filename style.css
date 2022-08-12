@@ -331,6 +331,62 @@ header {
         margin-bottom: 5px;
     }
 
+
+    #skillsMeter {
+        margin-top: 20px;
+        background-color: #1f1f1f
+            /* line-height: 20px; */
+    }
+
+    #html {
+
+        justify-content: center;
+        /* align-items: center; */
+        border-radius: 50%;
+        width: 3em;
+        height: 3em;
+        background-color: yellow;
+        background-image: conic-gradient(yellow 0deg, yellow 80deg, rgb(48, 45, 45) 0deg);
+        animation-name: meter;
+        animation-duration: 0.7s;
+        animation-iteration-count: 5;
+        /* line-height: 30px; */
+        /* padding: 20px; */
+        /* border-radius: 100%; */
+    }
+
+    #htmlCover {
+        top: 4px;
+        position: relative;
+        border-radius: 50%;
+        background-color: #1f1f1f;
+        width: 2.5em;
+        height: 2.5em;
+
+    }
+
+    @keyframes meter {
+        0% {
+            background-color: yellow;
+            background-image: conic-gradient(yellow 0deg, yellow 80deg, rgb(48, 45, 45) 0deg);
+        }
+
+        10% {
+            background-color: yellow;
+            background-image: conic-gradient(yellow 0deg, yellow 90deg, rgb(48, 45, 45) 0deg);
+        }
+
+        20% {
+            background-color: yellow;
+            background-image: conic-gradient(yellow 0deg, yellow 100deg, rgb(48, 45, 45) 0deg);
+        }
+
+        40% {
+            background-color: yellow;
+            background-image: conic-gradient(yellow 0deg, yellow 140deg, rgb(48, 45, 45) 0deg);
+        }
+    }
+
 }
 
 
