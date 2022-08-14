@@ -350,7 +350,7 @@ header {
     }
 
     #html {
-        padding: 2px;
+        padding: 1em;
         justify-content: center;
         border-radius: 50%;
         width: 3em;
@@ -483,7 +483,7 @@ header {
     }
 
     #css{
-        padding: 2px;
+        padding: 1em;
         justify-content: center;
         border-radius: 50%;
         width: 3em;
@@ -607,7 +607,7 @@ header {
     }
 
     #js{
-        padding: 2px;
+        padding: 3px;
         justify-content: center;
         border-radius: 50%;
         width: 3em;
@@ -723,13 +723,23 @@ header {
 }
 
 
+#note{
+    margin-top: 1em;
+    text-align:left;
+    word-spacing: 0.1em;
+    line-height: 0.8em;
+}
+
+#note p{
+    font-size: x-small;
+}
+
 @media screen and (max-width:850px) {
 
     #main {
         margin: 20px;
     }
 }
-
 
 /* 
     Border shadow 
