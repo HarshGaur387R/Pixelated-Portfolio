@@ -724,8 +724,9 @@ header {
 
 
 #note{
-    margin-top: 1em;
-    text-align:left;
+    width: 100%;
+    height: 100%;
+    margin-top: 0.5em;
     word-spacing: 0.1em;
     line-height: 0.8em;
 }
