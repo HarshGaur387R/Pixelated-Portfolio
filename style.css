@@ -1,3 +1,9 @@
+:root {
+    --hpos: 95%;
+    --cpos: 80%;
+    --jpos: 90%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -334,7 +340,7 @@ header {
 
     /* For Html meter */
 
-    #skillsMeterForHTML{
+    #skillsMeterForHTML {
         margin-top: 20px;
         background-color: #1f1f1f;
         border-left: 5px solid #000000;
@@ -343,7 +349,7 @@ header {
         border-bottom: 5px solid #1c1c1c;
     }
 
-    #htmlHead{
+    #htmlHead {
         margin-top: 3px;
         margin-bottom: 3px;
         font-size: large;
@@ -356,13 +362,7 @@ header {
         width: 3em;
         height: 3em;
         background-color: yellow;
-        background-image: conic-gradient(yellow 0deg, yellow 320deg, rgb(48, 45, 45) 0deg);
-        animation-name: htmlMeter;
-        animation-duration: 0.7s;
-        animation-iteration-count: 1;
-        animation-timing-function: linear;
-        border: 3px solid #1f1f1f;
-        margin-bottom: 3px;
+        background-image: conic-gradient(yellow 0%, yellow var(--hpos), rgb(48, 45, 45) 0%);
     }
 
     #htmlCover {
@@ -375,99 +375,16 @@ header {
         z-index: 7;
     }
 
-    #HTMLtext::after{
-        content: '95%';
+    #HTMLtext {
         position: relative;
         top: 13px;
-        animation-name: htmlTextChanger;
-        animation-timing-function: linear;
-        animation-duration: 0.7s;
-        animation-iteration-count: 1;
-    }
-
-    @keyframes htmlTextChanger {
-        0%{
-            content: '0%';
-        }
-        10%{
-            content: '10%';
-        }
-        20%{
-            content: '20%';
-        }
-        30%{
-            content: '30%';
-        }
-        40%{
-            content: '40%';
-        }
-        50%{
-            content: '50%';
-        }
-        60%{
-            content: '60%';
-        }
-        70%{
-            content: '70%';
-        }
-        80%{
-            content: '80%';
-        }
-        90%{
-            content: '95%';
-        }
-    
-        
-    }
-
-    @keyframes htmlMeter {
-        0% {
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 0deg, rgb(48, 45, 45) 0deg);
-        }
-
-        12.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 45deg, rgb(48, 45, 45) 0deg);
-        }
-
-        25%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 90deg, rgb(48, 45, 45) 0deg);
-        }
-
-        37.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 135deg, rgb(48, 45, 45) 0deg);
-        }
-
-        50%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 180deg, rgb(48, 45, 45) 0deg);
-        }
-
-        62.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 225deg, rgb(48, 45, 45) 0deg);
-            animation-play-state: paused;
-        }
-
-        75%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 270deg, rgb(48, 45, 45) 0deg);
-        }
-
-        87.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 320deg, rgb(48, 45, 45) 0deg);
-        }
-
 
     }
+
 
     /* For Css meter */
 
-    #skillsMeterForCSS{
+    #skillsMeterForCSS {
         margin-top: 5px;
         background-color: #1f1f1f;
         border-left: 5px solid #000000;
@@ -476,20 +393,20 @@ header {
         border-bottom: 5px solid #1c1c1c;
     }
 
-    #cssHead{
+    #cssHead {
         margin-top: 3px;
         margin-bottom: 3px;
         font-size: large;
     }
 
-    #css{
+    #css {
         padding: 1em;
         justify-content: center;
         border-radius: 50%;
         width: 3em;
         height: 3em;
         background-color: yellow;
-        background-image: conic-gradient(yellow 0deg, yellow 290deg, rgb(48, 45, 45) 0deg);
+        background-image: conic-gradient(yellow 0%, yellow var(--cpos), rgb(48, 45, 45) 0%);
         animation-name: cssMeter;
         animation-duration: 0.7s;
         animation-iteration-count: 1;
@@ -498,7 +415,7 @@ header {
         margin-bottom: 3px;
     }
 
-    #cssCover{
+    #cssCover {
         top: 4px;
         position: relative;
         border-radius: 50%;
@@ -508,90 +425,17 @@ header {
         z-index: 7;
     }
 
-    #CSStext::after{
-        content: '80%';
+    #CSStext{
         position: relative;
         top: 13px;
-        animation-name: cssTextChanger;
-        animation-timing-function: linear;
-        animation-duration: 0.7s;
-        animation-iteration-count: 1;
     }
 
-    @keyframes cssTextChanger {
-        0%{
-            content: '0%';
-        }
-        10%{
-            content: '10%';
-        }
-        20%{
-            content: '20%';
-        }
-        30%{
-            content: '30%';
-        }
-        40%{
-            content: '40%';
-        }
-        50%{
-            content: '50%';
-        }
-        60%{
-            content: '60%';
-        }
-        70%{
-            content: '70%';
-        }
-        80%{
-            content: '80%';
-        }
-    
-        
-    }
 
-    @keyframes cssMeter {
-        0% {
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 0deg, rgb(48, 45, 45) 0deg);
-        }
 
-        12.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 45deg, rgb(48, 45, 45) 0deg);
-        }
-
-        25%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 90deg, rgb(48, 45, 45) 0deg);
-        }
-
-        37.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 135deg, rgb(48, 45, 45) 0deg);
-        }
-
-        50%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 180deg, rgb(48, 45, 45) 0deg);
-        }
-
-        62.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 225deg, rgb(48, 45, 45) 0deg);
-            animation-play-state: paused;
-        }
-
-        75%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 290deg, rgb(48, 45, 45) 0deg);
-        }
-
-    }
 
     /* For Js Meter */
 
-    #skillsMeterForJS{
+    #skillsMeterForJS {
         margin-top: 5px;
         background-color: #1f1f1f;
         border-left: 5px solid #000000;
@@ -600,29 +444,25 @@ header {
         border-bottom: 5px solid #1c1c1c;
     }
 
-    #jsHead{
+    #jsHead {
         margin-top: 3px;
         margin-bottom: 3px;
         font-size: large;
     }
 
-    #js{
+    #js {
         padding: 3px;
         justify-content: center;
         border-radius: 50%;
         width: 3em;
         height: 3em;
         background-color: yellow;
-        background-image: conic-gradient(yellow 0deg, yellow 310deg, rgb(48, 45, 45) 0deg);
-        animation-name: jsMeter;
-        animation-duration: 0.7s;
-        animation-iteration-count: 1;
-        animation-timing-function: linear;
+        background-image: conic-gradient(yellow 0%, yellow var(--jpos), rgb(48, 45, 45) 0%);
         border: 3px solid #1f1f1f;
         margin-bottom: 3px;
     }
 
-    #jsCover{
+    #jsCover {
         top: 4px;
         position: relative;
         border-radius: 50%;
@@ -632,98 +472,16 @@ header {
         z-index: 7;
     }
 
-    #JStext::after{
-        content: '90%';
+    #JStext {
         position: relative;
         top: 13px;
-        animation-name: jsTextChanger;
-        animation-timing-function: linear;
-        animation-duration: 0.7s;
-        animation-iteration-count: 1;
     }
 
-    @keyframes jsTextChanger {
-        0%{
-            content: '0%';
-        }
-        10%{
-            content: '10%';
-        }
-        20%{
-            content: '20%';
-        }
-        30%{
-            content: '30%';
-        }
-        40%{
-            content: '40%';
-        }
-        50%{
-            content: '50%';
-        }
-        60%{
-            content: '60%';
-        }
-        70%{
-            content: '70%';
-        }
-        80%{
-            content: '80%';
-        }
-        90%{
-            content: '90%';
-        }
-    
-        
-    }
-
-    @keyframes jsMeter {
-        0% {
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 0deg, rgb(48, 45, 45) 0deg);
-        }
-
-        12.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 45deg, rgb(48, 45, 45) 0deg);
-        }
-
-        25%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 90deg, rgb(48, 45, 45) 0deg);
-        }
-
-        37.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 135deg, rgb(48, 45, 45) 0deg);
-        }
-
-        50%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 180deg, rgb(48, 45, 45) 0deg);
-        }
-
-        62.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 225deg, rgb(48, 45, 45) 0deg);
-            animation-play-state: paused;
-        }
-
-        75%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 290deg, rgb(48, 45, 45) 0deg);
-        }
-
-        87.5%{
-            background-color: yellow;
-            background-image: conic-gradient(yellow 0deg, yellow 310deg, rgb(48, 45, 45) 0deg);
-        }
-
-    }
 }
 
 
-#note{
+
+#note {
     width: 100%;
     height: 100%;
     margin-top: 0.5em;
@@ -731,7 +489,7 @@ header {
     line-height: 0.8em;
 }
 
-#note p{
+#note p {
     font-size: x-small;
 }
 
