@@ -477,6 +477,29 @@ header {
         top: 13px;
     }
 
+    #projects{
+        color: yellow;
+        border: 2px solid;
+        margin: auto;
+        align-items: center;
+
+        height: 550px;
+        /* height: 30em; */
+        margin-top: 50px;
+        padding: 16px;
+
+        border-left: 2px solid yellow;
+        /* border-left: 4px solid #505050; */
+        border-right: 10px solid rgb(18, 18, 18);
+        border-top: 10px solid rgb(69, 67, 67);
+        border-bottom: 10px solid rgb(18, 18, 18);
+
+        box-shadow: -6px 0 0 0 black,
+            6px 0 0 0 black,
+            0 -6px 0 0 black,
+            0 6px 0 0 black
+    }
+
 }
 
 
