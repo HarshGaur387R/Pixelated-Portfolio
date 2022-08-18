@@ -425,7 +425,7 @@ header {
         z-index: 7;
     }
 
-    #CSStext{
+    #CSStext {
         position: relative;
         top: 13px;
     }
@@ -477,7 +477,7 @@ header {
         top: 13px;
     }
 
-    #projects{
+    #projects {
         color: yellow;
         border: 2px solid;
         margin: auto;
@@ -498,6 +498,46 @@ header {
             6px 0 0 0 black,
             0 -6px 0 0 black,
             0 6px 0 0 black
+    }
+
+    #myProjectHeader {
+        font-size: 2em;
+        padding: 10px;
+        background-color: #1f1f1f;
+        border-left: 5px solid #000000;
+        border-right: 5px solid #1c1c1c;
+        border-top: 5px solid #000000;
+        border-bottom: 5px solid #1c1c1c;
+
+        /* rgb(255, 255, 165); */
+        /* box-shadow: 5px 0px 5px -7px inset; */
+    }
+
+    #projectsHolder{
+        overflow-y: auto;
+        overflow-x: auto;
+        height: 80%;
+        margin-top: 10px;
+
+        /* border-left: 5px solid #000000;
+        border-right: 5px solid #1c1c1c;
+        border-top: 5px solid #000000;
+        border-bottom: 5px solid #1c1c1c; */
+        border-top: 5px solid rgba(79, 79, 73, 0.471);
+        border-bottom: 5px solid rgba(79, 79, 73, 0.471);
+
+    }
+
+    .projectCards{
+        background-color: #1f1f1f94;
+        height: 50px;
+        padding: 15px;
+        margin-top: 10px;
+        text-align: justify;
+        border-left: 5px solid #000000;
+        border-right: 5px solid #1c1c1c;
+        border-top: 5px solid #000000;
+        border-bottom: 5px solid #1c1c1c;
     }
 
 }
