@@ -530,14 +530,39 @@ header {
 
     .projectCards{
         background-color: #1f1f1f94;
-        height: 50px;
-        padding: 15px;
+        /* height: 50px; */
+        /* padding: 15px; */
         margin-top: 10px;
+        margin-bottom: 10px;
         text-align: justify;
         border-left: 5px solid #000000;
         border-right: 5px solid #1c1c1c;
         border-top: 5px solid #000000;
         border-bottom: 5px solid #1c1c1c;
+        display: flex;
+        gap: 5px;
+    }
+
+    #projectImage{
+        padding: 17px;
+        /* margin-top: -10px; */
+        /* padding: 14px 10px; */
+        /* width: 60px; */
+        /* margin-left: -12px; */
+        background-color: #131313;
+        /* height: 42px; */
+    }
+
+    #projectDetail{
+        flex-grow: 1;
+        /* padding: 2px; */
+        /* width: 60%; */
+        /* margin-left: 5px; */
+        /* margin-top: -10px; */
+        font-size: 90%;
+        text-align: center;
+        background-color: #1c1c1c;
+        /* height: 4.6em; */
     }
 
 }
