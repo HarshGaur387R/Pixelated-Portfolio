@@ -291,6 +291,7 @@ header {
 
     #nameBox {
         margin-top: 10px;
+        font-size: 2em;
     }
 
     #fieldBox {
@@ -551,23 +552,23 @@ header {
         background-color: #000000;
     }
 
-    #pythonProjectImage {
+    .ProjectImage {
         padding: 17px;
         /* background-color: #131313; */
         background-color: #000000;
         margin: 3px;
     }
 
-    #pythonHeader{
+    .projectHeader{
         margin: 10px 10px 10px;
         font-size: large;
     }
 
-    #pythonProjectDis{
+    .projectDis{
         font-size: 60%;
         margin-top: -5px;
     }
-    #pythonProjectDis::after{
+    .projectDis::after{
         content: 'Available on GITHUB';
         display: block;
         font-size: small;
