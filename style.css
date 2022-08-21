@@ -513,7 +513,7 @@ header {
         /* box-shadow: 5px 0px 5px -7px inset; */
     }
 
-    #projectsHolder{
+    #projectsHolder {
         overflow-y: auto;
         overflow-x: auto;
         height: 80%;
@@ -528,7 +528,7 @@ header {
 
     }
 
-    .projectCards{
+    .projectCards {
         background-color: #1f1f1f94;
         /* height: 50px; */
         /* padding: 15px; */
@@ -540,24 +540,40 @@ header {
         border-top: 5px solid #000000;
         border-bottom: 5px solid #1c1c1c;
         display: flex;
-        gap: 5px;
     }
 
-    #projectImage{
-        padding: 17px;
-        background-color: #131313;
-    }
 
-    #projectDetail{
+    .projectDetail {
+        margin: 3px;
         flex-grow: 1;
         font-size: 90%;
         text-align: center;
-        background-color: #1c1c1c;
+        background-color: #000000;
     }
 
+    #pythonProjectImage {
+        padding: 17px;
+        /* background-color: #131313; */
+        background-color: #000000;
+        margin: 3px;
+    }
+
+    #pythonHeader{
+        margin: 10px 10px 10px;
+        font-size: large;
+    }
+
+    #pythonProjectDis{
+        font-size: 60%;
+        margin-top: -5px;
+    }
+    #pythonProjectDis::after{
+        content: 'Available on GITHUB';
+        display: block;
+        font-size: small;
+        margin-top: 5px;
+    }
 }
-
-
 
 #note {
     width: 100%;
