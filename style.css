@@ -545,24 +545,14 @@ header {
 
     #projectImage{
         padding: 17px;
-        /* margin-top: -10px; */
-        /* padding: 14px 10px; */
-        /* width: 60px; */
-        /* margin-left: -12px; */
         background-color: #131313;
-        /* height: 42px; */
     }
 
     #projectDetail{
         flex-grow: 1;
-        /* padding: 2px; */
-        /* width: 60%; */
-        /* margin-left: 5px; */
-        /* margin-top: -10px; */
         font-size: 90%;
         text-align: center;
         background-color: #1c1c1c;
-        /* height: 4.6em; */
     }
 
 }
