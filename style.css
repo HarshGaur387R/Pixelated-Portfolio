@@ -567,12 +567,22 @@ header {
     .projectDis{
         font-size: 60%;
         margin-top: -5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        line-height: 0.9em;
     }
     .projectDis::after{
         content: 'Available on GITHUB';
         display: block;
         font-size: small;
         margin-top: 5px;
+    }
+
+    #web3Project{
+        font-size: 60%;
+        margin-top: -5px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
 
