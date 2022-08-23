@@ -615,6 +615,17 @@ header {
             0 -6px 0 0 black,
             0 6px 0 0 black
     }
+
+    #servicesHeader{
+        font-size: 2em;
+        line-height: 25px;
+        padding: 10px;
+        background-color: #1f1f1f;
+        border-left: 5px solid #000000;
+        border-right: 5px solid #1c1c1c;
+        border-top: 5px solid #000000;
+        border-bottom: 5px solid #1c1c1c;
+    }
 }
 
 #note {
