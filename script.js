@@ -1,11 +1,4 @@
-// const y = document.getElementById("meters");
-// if (y) {
-//     y.addEventListener("mouseover", state);
-// }
-// else {
-//     console.log("element (html) is returning null.");
-// }
-
+var sidebarState;
 var times = 0;
 var id;
 
@@ -23,16 +16,6 @@ function openSidebar() {
 }
 
 function state() {
-    // y.removeEventListener("mouseover", state);
-    // setTimeout(function () {
-    // y.addEventListener("mouseover", state);
-    // }, 5000);
-
-    // window.removeEventListener('scroll', state);
-
-    // setTimeout(function () {
-    //     window.addEventListener("scroll",state)
-    // }, 5000);
 
     var screen = document.getElementById("CSStext");
     if (isInViewPort(screen) && times == 0) {
@@ -44,6 +27,8 @@ function state() {
         move();
         
     }
+
+    closeSidebar();
 }
 
 function move() {
@@ -107,3 +92,8 @@ function isInViewPort(element) {
 }
 
 window.addEventListener('scroll', state, false);
+
+
+document.getElementById("wrapper").addEventListener('click',()=>{
+    closeSidebar();
+});
