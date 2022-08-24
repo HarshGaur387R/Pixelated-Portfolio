@@ -643,13 +643,21 @@ header {
         /* box-shadow: -10px 0px 0px 0px rgb(69, 82, 79);   */
     }
 
+    #screenButtons{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9em;
+        
+    }
+
     #nextButton {
-        margin-top: 5px;
         width: 30px;
         height: 58px;
         position: relative;
         overflow: hidden;
-        box-shadow: -2px 0  0px 0px rgb(0, 0, 0);
+        box-shadow: -3px 0  0px 0px rgb(0, 0, 0);
         
     }
 
@@ -662,12 +670,37 @@ header {
         background-color: rgb(32, 28, 28);
 
         border-left: 0px solid rgb(18, 18, 18);
-        border-top: 2px solid rgb(44, 44, 44);
-        border-right: 2px solid rgb(18, 18, 18);
+        border-top: 3px solid rgb(44, 44, 44);
+        border-right: 3px solid rgb(18, 18, 18);
         transform: rotate(45deg);
         top: 8px;
         left: -25px;
-        box-shadow: 0px -2px 0px 0px rgb(0, 0, 0),0px 0px 0px 2px black;
+        box-shadow: 0px -2px 0px 0px rgb(0, 0, 0),0px 0px 0px 3px black;
+    }
+
+    #previousButton {
+        width: 30px;
+        height: 58px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 3px 0  0px 0px rgb(0, 0, 0);
+    }
+
+    #previousButton::after{
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        /* background-color: #1f1f1f; */
+        background-color: rgb(32, 28, 28);
+
+        border-left: 3px solid rgb(44, 44, 44);
+        border-bottom: 3px solid rgb(18, 18, 18);
+
+        transform: rotate(45deg);
+        top: 8px;
+        left: 12px;
+        box-shadow: 0px 2px 0px 0px rgb(0, 0, 0),0px 0px 0px 3px black;
     }
 }
 
