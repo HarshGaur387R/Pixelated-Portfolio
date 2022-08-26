@@ -1,6 +1,11 @@
 var sidebarState;
 var times = 0;
 var id;
+var current_image_index=0;
+
+const imageElements =["<img id=\"image\" src=\"images/serviceScreenImages/serviceBotResized.gif\" alt=\"\" style=\"width:10em; margin-left:-1em; margin-top:50px;\">" , "<img id=\"image\" src=\"images/serviceScreenImages/responsiveWebsite.gif\" alt=\"\" style=\"width:10em; margin-left:0; margin-top:50px;\"></img>"];
+
+const serviceDescription=["I can create Discord bot for you.", "I can create responsive website for you."];
 
 function closeSidebar() {
     document.getElementById("sidebar").style.transform = "translate(-200px)";
@@ -96,4 +101,18 @@ window.addEventListener('scroll', state, false);
 
 document.getElementById("wrapper").addEventListener('click',()=>{
     closeSidebar();
+});
+
+
+document.getElementById("nextButton").addEventListener('click',()=>{
+   
+   document.getElementById("serviceImg").innerHTML = imageElements[current_image_index];
+   document.getElementById("serviceDescription").innerHTML = serviceDescription[current_image_index];
+
+   ++current_image_index;
+
+   if(current_image_index > 1){
+    current_image_index =0;
+   }
+
 });
