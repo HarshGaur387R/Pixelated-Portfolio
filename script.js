@@ -3,9 +3,9 @@ var times = 0;
 var id;
 var current_image_index=0;
 
-const imageElements =["<img id=\"image\" src=\"images/serviceScreenImages/serviceBotResized.gif\" alt=\"\" style=\"width:10em; margin-left:-1em; margin-top:50px;\">" , "<img id=\"image\" src=\"images/serviceScreenImages/responsiveWebsite.gif\" alt=\"\" style=\"width:10em; margin-left:0; margin-top:57px;\"></img>"];
+const imageElements =["<img id=\"image\" src=\"images/serviceScreenImages/serviceBotResized.gif\" alt=\"\" style=\"width:10em; margin-left:-1em; margin-top:50px;\">" , "<img id=\"image\" src=\"images/serviceScreenImages/responsiveWebsite.gif\" alt=\"\" style=\"width:10em; margin-left:0; margin-top:57px;\"></img>" , "<img id=\"image\" src=\"images/serviceScreenImages/web3Service.gif\" alt=\"\" style=\"width:10em; margin-left:-1em; margin-top:35px;\">"];
 
-const serviceDescription=["I can create Discord bot for you.", "I can create responsive website for you."];
+const serviceDescription=["I can create Discord bot for you.", "I can create responsive website for you.","Service will be available soon."];
 
 function closeSidebar() {
     document.getElementById("sidebar").style.transform = "translate(-200px)";
@@ -109,7 +109,7 @@ document.getElementById("nextButton").addEventListener('click',()=>{
    
    ++current_image_index;
 
-   if(current_image_index > 1){
+   if(current_image_index > 2){
       current_image_index = 0;
    }
 
@@ -123,7 +123,7 @@ document.getElementById("previousButton").addEventListener('click',()=>{
     --current_image_index;
 
     if(current_image_index < 0){
-        current_image_index = 1;
+        current_image_index = 2;
     }
 
    document.getElementById("serviceImg").innerHTML = imageElements[current_image_index];
