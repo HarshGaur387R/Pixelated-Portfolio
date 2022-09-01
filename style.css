@@ -775,25 +775,31 @@ header {
         border-bottom: 5px solid #1c1c1c;
     }
 
+    #contactform{
+        margin-top: 20px;
+    }
 
-    #nameLabel {
+    .retroLabel {
         display: flex;
         max-width: 600px;
         padding: 0px 20px;
     }
 
-    #nameLabel label {
+    .retroLabel label {
+        color: rgb(98, 98, 87);
+        text-shadow: 1px 0px 1px black;
         padding: 5px 1px;
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
-    #nameInput {
+    .retroInput {
         max-width: 600px;
         /* min-width: 55%; */
         padding: 0px 20px;
+        margin-bottom: 15px;
     }
 
-    #nameInput input {
+    .retroInput input {
         color: rgb(255, 255, 165);
         font-family: 'Pixeboy-z8XGD';
         font-size: 2.5em;
@@ -808,7 +814,7 @@ header {
 
     }
 
-    #nameInput input::placeholder{
+    .retroInput input::placeholder{
         color: gray;
     }
 }
@@ -837,12 +843,12 @@ header {
 @media screen and (max-width:480px) {
 
 
-    #nameLabel {
+    .retroLabel {
         display: flex;
         padding: 0px 0px;
     }
 
-    #nameInput {
+    .retroInput {
         padding: 0px 0px;
 
     }
