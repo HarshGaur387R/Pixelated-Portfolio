@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Harsh Gaur</title>
 </head>
 
@@ -207,24 +210,34 @@
                     <div id="contactform">
                         <div class="retroInputBox">
                             <div class="retroLabel">
-                                <label>Name</label>
+                                <label for="nameInput">Name</label>
                             </div>
                             <div class="retroInput">
-                                <input name="nameInput" placeholder="Erwin smith">
+                                <input name="nameInput" placeholder="Erwin Smith">
                             </div>
                         </div>
 
                         <div class="retroInputBox">
                             <div class="retroLabel">
-                                <label>email</label>
+                                <label for="emailInput">email</label>
                             </div>
                             <div class="retroInput">
-                                <input name="emailInput" placeholder="Esmith@gmail.com">
+                                <input name="emailInput" type="email" placeholder="Esmith@gmail.com">
                             </div>
                         </div>
 
-                        
+                        <div class="retroInputBox">
+                            <div class="retroLabel">
+                                <label for="message">Message</label>
+                            </div>
+                            <div class="retroMessageBox">
+                               <textarea name="message" placeholder="My soldiers rage..."></textarea>
+                            </div>
+                        </div>
+
                     </div>
+
+                    
                 </div>
 
             </div>
