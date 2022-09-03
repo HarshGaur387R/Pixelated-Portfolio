@@ -147,7 +147,7 @@ header {
         padding: 20px;
         list-style: none;
         transition: .2s;
-
+        user-select: none;
 
         border-right: 4px solid rgb(18, 18, 18);
         border-top: 4px solid rgb(69, 67, 67);
@@ -334,12 +334,20 @@ header {
             0 6px 0 0 black
     }
 
-    #descriptionInDetail {
-        line-height: 18px;
+    #MyImpSkills{
+        /* line-height: 18px;
         margin-left: 5px;
         margin-right: 5px;
         font-size: 1em;
-        margin-bottom: 5px;
+        margin-bottom: 5px; */
+
+        font-size: 2em;
+        padding: 10px;
+        background-color: #1f1f1f;
+        border-left: 5px solid #000000;
+        border-right: 5px solid #1c1c1c;
+        border-top: 5px solid #000000;
+        border-bottom: 5px solid #1c1c1c;
     }
 
     /* For Html meter */
@@ -811,7 +819,6 @@ header {
         border-right: 3px solid rgb(47, 56, 53);
         border-top: 3px solid rgb(33, 38, 36);
         border-bottom: 3px solid rgb(47, 56, 53);
-
     }
 
     .retroInput input::placeholder{
@@ -843,19 +850,48 @@ header {
         color: gray;
     }
 
+    #SubmitButton{
+        user-select: none;
+        width: 3.5em;
+        margin: 20px 10px 5px;
+        padding: 10px;
+
+        background-color: #1f1f1f;
+
+        border-left: 3px solid transparent;
+        border-top: 3px solid rgb(44, 44, 44);
+        border-right: 3px solid rgb(18, 18, 18);
+        border-bottom: 3px solid rgb(18, 18, 18);
+
+        box-shadow: -2px 0 0 0 black,
+            2px 0 0 0 black,
+            0 -2px 0 0 black,
+            0 2px 0 0 black;
+    }
+
+    #SubmitButton:hover{
+        background-color: rgb(24, 21, 21);
+    }
+
+    #SubmitButton:active{
+        border-left: 3px solid rgb(255, 255, 165);
+        background-color: rgb(23, 20, 20);
+
+        border-right: 3px solid rgb(29, 25, 25);
+        border-top: 3px solid rgb(29, 25, 25);
+        border-bottom: 3px solid rgb(29, 25, 25);
+    }
+
 }
 
 #note {
     width: 100%;
     height: 100%;
-    margin-top: 0.5em;
+    margin-top: 1em;
     word-spacing: 0.1em;
     line-height: 0.8em;
 }
 
-#note p {
-    font-size: x-small;
-}
 
 @media screen and (max-width:850px) {
 
