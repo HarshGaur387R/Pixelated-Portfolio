@@ -108,7 +108,7 @@ header {
 }
 
 #home {
-    color: yellow;    
+    color: yellow;
     margin-top: 50px;
     padding: 16px;
 
@@ -244,6 +244,7 @@ header {
 /* For Html meter */
 
 #skillsMeterForHTML {
+    padding: 10px 0px 10px 0px;
     margin-top: 20px;
     background-color: #1f1f1f;
     border-left: 5px solid #000000;
@@ -256,31 +257,33 @@ header {
     margin-top: 3px;
     margin-bottom: 3px;
     font-size: large;
+    padding-bottom: 0.6em;
 }
 
 #html {
     padding: 1em;
     justify-content: center;
     border-radius: 50%;
-    width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
     background-color: yellow;
     background-image: conic-gradient(yellow 0%, yellow var(--hpos), rgb(48, 45, 45) 0%);
 }
 
 #htmlCover {
-    top: 4px;
-    position: relative;
+    /* top: 4px; */
+    /* position: relative; */
     border-radius: 50%;
     background-color: #1f1f1f;
-    width: 2.5em;
-    height: 2.5em;
+    width: 100%;
+    height: 100%;
     z-index: 7;
 }
 
 #HTMLtext {
-    position: relative;
-    top: 13px;
+    /* position: relative; */
+    /* top: 13px; */
+    padding-top: 2em;
 
 }
 
@@ -288,6 +291,7 @@ header {
 /* For Css meter */
 
 #skillsMeterForCSS {
+    padding: 10px 0px 10px 0px;
     margin-top: 5px;
     background-color: #1f1f1f;
     border-left: 5px solid #000000;
@@ -300,45 +304,36 @@ header {
     margin-top: 3px;
     margin-bottom: 3px;
     font-size: large;
+    padding-bottom: 0.6em;
 }
 
 #css {
     padding: 1em;
     justify-content: center;
     border-radius: 50%;
-    width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
     background-color: yellow;
     background-image: conic-gradient(yellow 0%, yellow var(--cpos), rgb(48, 45, 45) 0%);
-    animation-name: cssMeter;
-    animation-duration: 0.7s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    border: 3px solid #1f1f1f;
-    margin-bottom: 3px;
 }
 
 #cssCover {
-    top: 4px;
-    position: relative;
     border-radius: 50%;
     background-color: #1f1f1f;
-    width: 2.5em;
-    height: 2.5em;
+    width: 100%;
+    height: 100%;
     z-index: 7;
 }
 
 #CSStext {
-    position: relative;
-    top: 13px;
+    padding-top: 2em;
 }
-
-
 
 
 /* For Js Meter */
 
 #skillsMeterForJS {
+    padding: 10px 0px 10px 0px;
     margin-top: 5px;
     background-color: #1f1f1f;
     border-left: 5px solid #000000;
@@ -351,35 +346,45 @@ header {
     margin-top: 3px;
     margin-bottom: 3px;
     font-size: large;
+    padding-bottom: 0.6em;
 }
 
 #js {
-    padding: 3px;
+    padding: 1em;
     justify-content: center;
     border-radius: 50%;
-    width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
     background-color: yellow;
-    background-image: conic-gradient(yellow 0%, yellow var(--jpos), rgb(48, 45, 45) 0%);
-    border: 3px solid #1f1f1f;
-    margin-bottom: 3px;
+    background-image: conic-gradient(yellow 0%, yellow var(--cpos), rgb(48, 45, 45) 0%);
 }
 
 #jsCover {
-    top: 4px;
-    position: relative;
     border-radius: 50%;
     background-color: #1f1f1f;
-    width: 2.5em;
-    height: 2.5em;
+    width: 100%;
+    height: 100%;
     z-index: 7;
 }
 
 #JStext {
-    position: relative;
-    top: 13px;
+    padding-top: 2em;
 }
 
+
+#note {
+    width: 100%;
+    height: 100%;
+    margin-top: 1em;
+    word-spacing: 0.1em;
+    line-height: 0.8em;
+    font-size: large;
+    background-color: #1f1f1f;
+    padding: 15px 0px 15px 0px;
+    font-variant: small-caps;
+
+
+}
 
 @media screen and (max-width: 850px) {
     /* @font-face {
@@ -627,6 +632,7 @@ header {
     /* For Html meter */
 
     #skillsMeterForHTML {
+        padding: 0%;
         margin-top: 20px;
         background-color: #1f1f1f;
         border-left: 5px solid #000000;
@@ -639,6 +645,7 @@ header {
         margin-top: 3px;
         margin-bottom: 3px;
         font-size: large;
+        padding: 0%;
     }
 
     #html {
@@ -664,13 +671,14 @@ header {
     #HTMLtext {
         position: relative;
         top: 13px;
-
+        padding: 0%;
     }
 
 
     /* For Css meter */
 
     #skillsMeterForCSS {
+        padding: 0%;
         margin-top: 5px;
         background-color: #1f1f1f;
         border-left: 5px solid #000000;
@@ -683,6 +691,7 @@ header {
         margin-top: 3px;
         margin-bottom: 3px;
         font-size: large;
+        padding: 0%;
     }
 
     #css {
@@ -693,12 +702,6 @@ header {
         height: 3em;
         background-color: yellow;
         background-image: conic-gradient(yellow 0%, yellow var(--cpos), rgb(48, 45, 45) 0%);
-        animation-name: cssMeter;
-        animation-duration: 0.7s;
-        animation-iteration-count: 1;
-        animation-timing-function: linear;
-        border: 3px solid #1f1f1f;
-        margin-bottom: 3px;
     }
 
     #cssCover {
@@ -714,6 +717,7 @@ header {
     #CSStext {
         position: relative;
         top: 13px;
+        padding: 0%;
     }
 
 
@@ -722,6 +726,7 @@ header {
     /* For Js Meter */
 
     #skillsMeterForJS {
+        padding: 0%;
         margin-top: 5px;
         background-color: #1f1f1f;
         border-left: 5px solid #000000;
@@ -734,18 +739,17 @@ header {
         margin-top: 3px;
         margin-bottom: 3px;
         font-size: large;
+        padding: 0%;
     }
 
     #js {
-        padding: 3px;
+        padding: 1em;
         justify-content: center;
         border-radius: 50%;
         width: 3em;
         height: 3em;
         background-color: yellow;
         background-image: conic-gradient(yellow 0%, yellow var(--jpos), rgb(48, 45, 45) 0%);
-        border: 3px solid #1f1f1f;
-        margin-bottom: 3px;
     }
 
     #jsCover {
@@ -761,7 +765,23 @@ header {
     #JStext {
         position: relative;
         top: 13px;
+        padding: 0%;
     }
+
+
+    #note {
+        width: 100%;
+        height: 100%;
+        margin-top: 1em;
+        word-spacing: 0.1em;
+        line-height: 0.8em;
+        font-size: medium;
+        background-color: #1f1f1f;
+        padding: 10px 0px 15px 0px;
+        font-variant: small-caps;
+
+    }
+
 
     #projects {
         color: yellow;
@@ -1156,15 +1176,10 @@ header {
         border-bottom: 3px solid rgb(29, 25, 25);
     }
 
+
 }
 
-#note {
-    width: 100%;
-    height: 100%;
-    margin-top: 1em;
-    word-spacing: 0.1em;
-    line-height: 0.8em;
-}
+
 
 
 @media screen and (max-width:850px) {
