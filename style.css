@@ -394,7 +394,7 @@ header {
     border: 2px solid;
     margin: auto;
     align-items: center;
-    
+
     height: 750px;
     /* height: 30em; */
 
@@ -479,7 +479,7 @@ header {
     margin: 3px;
 }
 
-.ProjectImage img{
+.ProjectImage img {
     width: 7em;
 }
 
@@ -509,6 +509,285 @@ header {
     margin-left: 5px;
     margin-right: 5px;
 }
+
+
+#services {
+    color: yellow;
+    border: 2px solid;
+    margin: auto;
+    align-items: center;
+
+    height: 750px;
+    /* height: 30em; */
+    margin-top: 50px;
+    padding: 16px;
+
+    border-left: 2px solid yellow;
+    /* border-left: 4px solid #505050; */
+    border-right: 10px solid rgb(18, 18, 18);
+    border-top: 10px solid rgb(69, 67, 67);
+    border-bottom: 10px solid rgb(18, 18, 18);
+
+    box-shadow: -6px 0 0 0 black,
+        6px 0 0 0 black,
+        0 -6px 0 0 black,
+        0 6px 0 0 black
+}
+
+#servicesHeader {
+
+    font-size: 300%;
+    padding: 2%;
+    background-color: #1f1f1f;
+    border-left: 5px solid #000000;
+    border-right: 5px solid #1c1c1c;
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #1c1c1c;
+}
+
+
+#servicesScreen {
+    width: 90%;
+    height: 50%;
+    background-color: rgb(57, 68, 65);
+    margin-top: 3em;
+    border-left: 5px solid rgb(33, 38, 36);
+    border-right: 5px solid rgb(47, 56, 53);
+    border-top: 5px solid rgb(33, 38, 36);
+    border-bottom: 5px solid rgb(47, 56, 53);
+    /* box-shadow: -10px 0px 0px 0px rgb(69, 82, 79);   */
+}
+
+
+#screenButtons {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70%;
+
+}
+
+#nextButton {
+    width: 30px;
+    height: 58px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: -2px 0 0px 0px rgb(18, 18, 18);
+
+}
+
+#nextButton::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    /* background-color: #1f1f1f; */
+    background-color: rgb(32, 28, 28);
+
+    border-top: 2px solid rgb(44, 44, 44);
+    border-right: 2px solid rgb(18, 18, 18);
+
+    transform: rotate(45deg);
+    top: 8px;
+    left: -25px;
+    box-shadow: 0px -2px 0px 0px rgb(44, 44, 44), 0px 0px 0px 1px rgb(18, 18, 18);
+}
+
+#nextButton:active {
+    box-shadow: -1px 0 0px 0px rgb(18, 18, 18);
+
+}
+
+#nextButton:active::after {
+    border-top: 2px solid rgb(23, 23, 23);
+    border-right: 2px solid rgb(26, 22, 22);
+
+    background-color: rgb(29, 25, 25);
+    box-shadow: 0px -2px 0px 0px rgb(44, 44, 44), 0px 0px 0px 0px rgb(18, 18, 18);
+
+}
+
+
+#previousButton {
+    width: 30px;
+    height: 58px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 0 0px 0px rgb(18, 18, 18);
+}
+
+#previousButton::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    /* background-color: #1f1f1f; */
+    background-color: rgb(32, 28, 28);
+
+    border-left: 2px solid rgb(44, 44, 44);
+    border-bottom: 2px solid rgb(18, 18, 18);
+
+    transform: rotate(45deg);
+    top: 8px;
+    left: 12px;
+    box-shadow: 0px 1px 0px 0px rgb(18, 18, 18), 0px 0px 0px 2px rgb(44, 44, 44);
+}
+
+#previousButton:active {
+    box-shadow: 1px 0 0px 0px rgb(18, 18, 18);
+}
+
+#previousButton:active::after {
+    border-left: 2px solid rgb(23, 23, 23);
+    border-bottom: 2px solid rgb(26, 22, 22);
+
+    background-color: rgb(29, 25, 25);
+    box-shadow: 0px -2px 0px 0px rgb(44, 44, 44), 0px 0px 0px 0px rgb(18, 18, 18);
+}
+
+#serviceDescription {
+    color: rgb(255, 255, 165);
+    margin-top: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+    line-height: 15px;
+}
+
+#contact {
+
+    color: yellow;
+    border: 2px solid;
+    margin: auto;
+    align-items: center;
+
+    height: 700px;
+    /* height: 30em; */
+    margin-top: 50px;
+    padding: 16px;
+
+    border-left: 2px solid yellow;
+    /* border-left: 4px solid #505050; */
+    border-right: 10px solid rgb(18, 18, 18);
+    border-top: 10px solid rgb(69, 67, 67);
+    border-bottom: 10px solid rgb(18, 18, 18);
+
+    box-shadow: -6px 0 0 0 black,
+        6px 0 0 0 black,
+        0 -6px 0 0 black,
+        0 6px 0 0 black
+}
+
+#contactHeader {
+    font-size: 300%;
+    padding: 2%;
+    background-color: #1f1f1f;
+    border-left: 5px solid #000000;
+    border-right: 5px solid #1c1c1c;
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #1c1c1c;
+}
+
+#contactform {
+    margin-top: 20px;
+}
+
+.retroLabel {
+    display: flex;
+    max-width: 600px;
+    padding: 0px 20px;
+}
+
+.retroLabel label {
+    color: rgb(98, 98, 87);
+    text-shadow: 1px 0px 1px black;
+    padding: 5px 1px;
+    font-size: 2em;
+}
+
+.retroInput {
+    max-width: 600px;
+    /* min-width: 55%; */
+    padding: 0px 20px;
+    margin-bottom: 15px;
+}
+
+.retroInput input {
+    color: rgb(255, 255, 165);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    width: 100%;
+    height: 2em;
+    padding: 1px 1px;
+    background-color: rgb(57, 68, 65);
+    border-left: 3px solid rgb(33, 38, 36);
+    border-right: 3px solid rgb(47, 56, 53);
+    border-top: 3px solid rgb(33, 38, 36);
+    border-bottom: 3px solid rgb(47, 56, 53);
+}
+
+.retroInput input::placeholder {
+    color: rgba(143, 143, 143, 0.606);
+}
+
+.retroMessageBox {
+    max-width: 600px;
+    /* min-width: 55%; */
+    padding: 0px 20px;
+    margin-bottom: 15px;
+}
+
+.retroMessageBox textarea {
+    color: rgb(255, 255, 165);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    width: 100%;
+    height: 10em;
+    padding: 10px 1px;
+    background-color: rgb(57, 68, 65);
+    border-left: 3px solid rgb(33, 38, 36);
+    border-right: 3px solid rgb(47, 56, 53);
+    border-top: 3px solid rgb(33, 38, 36);
+    border-bottom: 3px solid rgb(47, 56, 53);
+}
+
+.retroMessageBox textarea::placeholder {
+    color: rgba(143, 143, 143, 0.606);
+
+}
+
+#SubmitButton {
+    user-select: none;
+    width: 3.5em;
+    margin: 20px 10px 5px;
+    padding: 10px;
+
+    background-color: #1f1f1f;
+
+    border-left: 3px solid transparent;
+    border-top: 3px solid rgb(44, 44, 44);
+    border-right: 3px solid rgb(18, 18, 18);
+    border-bottom: 3px solid rgb(18, 18, 18);
+
+    box-shadow: -2px 0 0 0 black,
+        2px 0 0 0 black,
+        0 -2px 0 0 black,
+        0 2px 0 0 black;
+}
+
+#SubmitButton:hover {
+    background-color: rgb(24, 21, 21);
+}
+
+#SubmitButton:active {
+    border-left: 3px solid rgb(255, 255, 165);
+    background-color: rgb(23, 20, 20);
+
+    border-right: 3px solid rgb(29, 25, 25);
+    border-top: 3px solid rgb(29, 25, 25);
+    border-bottom: 3px solid rgb(29, 25, 25);
+}
+
 
 @media screen and (max-width: 850px) {
     /* @font-face {
@@ -618,7 +897,7 @@ header {
         margin: auto;
         align-items: center;
 
-        height: 550px;
+        /* height: 550px; */
         /* height: 30em; */
         margin-top: 50px;
         padding: 16px;
@@ -998,7 +1277,7 @@ header {
         margin: 3px;
     }
 
-    .ProjectImage img{
+    .ProjectImage img {
         width: 3.5em;
     }
 
@@ -1070,7 +1349,7 @@ header {
         width: 90%;
         height: 50%;
         background-color: rgb(57, 68, 65);
-
+        margin-top: 0em;
         border-left: 5px solid rgb(33, 38, 36);
         border-right: 5px solid rgb(47, 56, 53);
         border-top: 5px solid rgb(33, 38, 36);
