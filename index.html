@@ -218,7 +218,7 @@
                             </div>
                             <div class="retroInput" oncontextmenu="return false" onselectstart="return false"
                                 onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
-                                <input name="nameInput" placeholder="Erwin Smith" autocomplete="off">
+                                <input id="ni" name="nameInput" placeholder="Erwin Smith" autocomplete="off">
                             </div>
                         </div>
 
@@ -228,7 +228,7 @@
                             </div>
                             <div class="retroInput" oncontextmenu="return false" onselectstart="return false"
                                 onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
-                                <input name="emailInput" type="email" placeholder="Esmith@gmail.com" autocomplete="off">
+                                <input id="ei" name="emailInput" type="email" placeholder="Esmith@gmail.com" autocomplete="off">
                             </div>
                         </div>
 
@@ -237,11 +237,11 @@
                                 <label for="message">Message</label>
                             </div>
                             <div class="retroMessageBox">
-                                <textarea name="message" placeholder="My soldiers rage..."></textarea>
+                                <textarea id="ms" name="message" placeholder="My soldiers rage..."></textarea>
                             </div>
                         </div>
 
-                        <div id="SubmitButton">Submit</div>
+                        <div id="SubmitButton" onclick="formValidation()">Submit</div>
 
                     </div>
 

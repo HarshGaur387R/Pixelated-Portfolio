@@ -134,3 +134,23 @@ document.getElementById("previousButton").addEventListener('click',()=>{
 const changeLocation = (link)=>{
     window.location = `#${link}`;
 }
+
+
+function formValidation(){
+
+    let name = document.getElementById("ni").value;
+    let email = document.getElementById("ei").value;
+    let message = document.getElementById("ms").value;
+
+    let format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    let numbers = /[1234567890]/;
+    
+    if(name == ""){
+        alert("Name is empty!");
+    }
+
+    else if(format.test(name) || numbers.test(name)){
+        alert("Name shouldn't contain any special character or number!");
+    }
+
+};
