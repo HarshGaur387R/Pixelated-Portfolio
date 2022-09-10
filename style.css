@@ -1527,7 +1527,7 @@ header {
     }
 
     .retroInput input::placeholder {
-        color: gray;
+        color: rgba(143, 143, 143, 0.606);
     }
 
     .retroMessageBox {
@@ -1552,7 +1552,7 @@ header {
     }
 
     .retroMessageBox textarea::placeholder {
-        color: gray;
+        color: rgba(143, 143, 143, 0.606);
     }
 
     #SubmitButton {

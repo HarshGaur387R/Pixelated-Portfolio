@@ -130,3 +130,7 @@ document.getElementById("previousButton").addEventListener('click',()=>{
    document.getElementById("serviceDescription").innerHTML = serviceDescription[current_image_index];
 
 });
+
+const changeLocation = (link)=>{
+    window.location = `#${link}`;
+}
