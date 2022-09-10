@@ -724,6 +724,7 @@ header {
     border-right: 3px solid rgb(47, 56, 53);
     border-top: 3px solid rgb(33, 38, 36);
     border-bottom: 3px solid rgb(47, 56, 53);
+    user-select: none;
 }
 
 .retroInput input::placeholder {
