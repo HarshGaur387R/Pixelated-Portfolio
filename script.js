@@ -1,11 +1,11 @@
 var sidebarState;
 var times = 0;
 var id;
-var current_image_index=0;
+var current_image_index = 0;
 
-const imageElements =["<img id=\"image\" src=\"images/serviceScreenImages/serviceBotResized.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:40px;\">" , "<img id=\"image\" src=\"images/serviceScreenImages/responsiveWebsite.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:0; margin-top:50px;\"></img>" , "<img id=\"image\" src=\"images/serviceScreenImages/web3Service.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:25px;\">"];
+const imageElements = ["<img id=\"image\" src=\"images/serviceScreenImages/serviceBotResized.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:40px;\">", "<img id=\"image\" src=\"images/serviceScreenImages/responsiveWebsite.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:0; margin-top:50px;\"></img>", "<img id=\"image\" src=\"images/serviceScreenImages/web3Service.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:25px;\">"];
 
-const serviceDescription=["I can create Discord bot for you.", "I can create responsive website for you.","Service will be available soon."];
+const serviceDescription = ["I can create Discord bot for you.", "I can create responsive website for you.", "Service will be available soon."];
 
 function closeSidebar() {
     document.getElementById("sidebar").style.transform = "translate(-200px)";
@@ -27,10 +27,10 @@ function state() {
         times = 1;
         move();
     }
-    else if(isInViewPort(screen) && times == 1){
+    else if (isInViewPort(screen) && times == 1) {
         clearInterval(id);
         move();
-        
+
     }
 
     closeSidebar();
@@ -40,7 +40,7 @@ function move() {
 
     let r = document.querySelector(':root');
     let rs = getComputedStyle(r);
-    
+
     let HTMLelement = document.getElementById("HTMLtext");
     let CSSelement = document.getElementById("CSStext");
     let JSelement = document.getElementById("JStext");
@@ -49,7 +49,7 @@ function move() {
     let width = 0;
 
     id = setInterval(frame, 20);
-    
+
     function frame() {
         if (width == 100) {
             clearInterval(id);
@@ -58,17 +58,17 @@ function move() {
             width++;
             counter++;
 
-            if(width<=95){
-            HTMLelement.innerText = counter + '%';
-            r.style.setProperty("--hpos", width + '%');
+            if (width <= 95) {
+                HTMLelement.innerText = counter + '%';
+                r.style.setProperty("--hpos", width + '%');
             }
-            if(width<=80){
-            CSSelement.innerText = counter +'%';
-            r.style.setProperty("--cpos",width+'%');
+            if (width <= 80) {
+                CSSelement.innerText = counter + '%';
+                r.style.setProperty("--cpos", width + '%');
             }
-            if(width<=90){
-            JSelement.innerText = counter + '%';
-            r.style.setProperty("--jpos",width+'%');
+            if (width <= 90) {
+                JSelement.innerText = counter + '%';
+                r.style.setProperty("--jpos", width + '%');
             }
         }
 
@@ -100,57 +100,95 @@ function isInViewPort(element) {
 window.addEventListener('scroll', state, false);
 
 
-document.getElementById("wrapper").addEventListener('click',()=>{
+document.getElementById("wrapper").addEventListener('click', () => {
     closeSidebar();
 });
 
 
-document.getElementById("nextButton").addEventListener('click',()=>{
-   
-   ++current_image_index;
+document.getElementById("nextButton").addEventListener('click', () => {
 
-   if(current_image_index > 2){
-      current_image_index = 0;
-   }
+    ++current_image_index;
 
-   document.getElementById("serviceImg").innerHTML = imageElements[current_image_index];
-   document.getElementById("serviceDescription").innerHTML = serviceDescription[current_image_index];
+    if (current_image_index > 2) {
+        current_image_index = 0;
+    }
+
+    document.getElementById("serviceImg").innerHTML = imageElements[current_image_index];
+    document.getElementById("serviceDescription").innerHTML = serviceDescription[current_image_index];
 
 });
 
-document.getElementById("previousButton").addEventListener('click',()=>{
+document.getElementById("previousButton").addEventListener('click', () => {
 
     --current_image_index;
 
-    if(current_image_index < 0){
+    if (current_image_index < 0) {
         current_image_index = 2;
     }
 
-   document.getElementById("serviceImg").innerHTML = imageElements[current_image_index];
-   document.getElementById("serviceDescription").innerHTML = serviceDescription[current_image_index];
+    document.getElementById("serviceImg").innerHTML = imageElements[current_image_index];
+    document.getElementById("serviceDescription").innerHTML = serviceDescription[current_image_index];
 
 });
 
-const changeLocation = (link)=>{
+const changeLocation = (link) => {
     window.location = `#${link}`;
 }
 
 
-function formValidation(){
+function formValidation() {
 
-    let name = document.getElementById("ni").value;
-    let email = document.getElementById("ei").value;
+    let name = "";
+    name = document.getElementById("ni").value;
+
+    let email = "";
+    email = document.getElementById("ei").value;
+
     let message = document.getElementById("ms").value;
 
-    let format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    document.getElementById("emailErrorLabel").innerHTML = "";
+    document.getElementById("nameErrorLabel").innerHTML = "";
+
+    let format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     let numbers = /[1234567890]/;
-    
-    if(name == ""){
-        alert("Name is empty!");
+
+    if (name == "") {
+        document.getElementById("nameErrorLabel").innerHTML = "!! Empty Name"
+        return false;
     }
 
-    else if(format.test(name) || numbers.test(name)){
-        alert("Name shouldn't contain any special character or number!");
+    else if (format.test(name) || numbers.test(name)) {
+        document.getElementById("nameErrorLabel").innerHTML = "!! Use Only Alphabets";
+        return false;
+    }
+
+    else if (email == "") {
+        document.getElementById("emailErrorLabel").innerHTML = "!! Empty Email";
+        return false;
+    }
+
+    else if (email.indexOf('@') <= 0 || email.indexOf('.') <= 0) {
+        document.getElementById("emailErrorLabel").innerHTML = "!! Wrong Email";
+        return false;
+    }
+
+    else if (email.slice(email.lastIndexOf('.'), email.length).length - 1 < 2 || email.slice(email.lastIndexOf('.'), email.length).length - 1 > 3) {
+        document.getElementById("emailErrorLabel").innerHTML = "!! Wrong Email";
+        return false;
+    }
+
+    else {
+       return true;
     }
 
 };
+
+
+function sendMail(){
+    if(formValidation() == true){
+        console.log("form is valid");
+    }
+    else{
+        console.log("form is not valid!");
+    }
+}

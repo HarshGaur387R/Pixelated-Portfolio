@@ -214,21 +214,23 @@
                     <div id="contactform">
                         <div class="retroInputBox">
                             <div class="retroLabel">
-                                <label for="nameInput">Name</label>
+                                <label for="nameInput">Name</label><span id="nameErrorLabel"></span>
                             </div>
                             <div class="retroInput" oncontextmenu="return false" onselectstart="return false"
                                 onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
-                                <input id="ni" name="nameInput" placeholder="Erwin Smith" autocomplete="off">
+                                <input id="ni" name="nameInput"
+                                    placeholder="Erwin Smith" autocomplete="off" maxlength="26">
                             </div>
                         </div>
 
                         <div class="retroInputBox">
                             <div class="retroLabel">
-                                <label for="emailInput">email</label>
+                                <label for="emailInput">Email</label><span id="emailErrorLabel"></span>
                             </div>
                             <div class="retroInput" oncontextmenu="return false" onselectstart="return false"
                                 onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
-                                <input id="ei" name="emailInput" type="email" placeholder="Esmith@gmail.com" autocomplete="off">
+                                <input id="ei" name="emailInput" type="email"
+                                    placeholder="Esmith@gmail.com" autocomplete="off" maxlength="26">
                             </div>
                         </div>
 
@@ -237,11 +239,11 @@
                                 <label for="message">Message</label>
                             </div>
                             <div class="retroMessageBox">
-                                <textarea id="ms" name="message" placeholder="My soldiers rage..."></textarea>
+                                <textarea id="ms" name="message" placeholder="My soldiers rage..." maxlength="200"></textarea>
                             </div>
                         </div>
 
-                        <div id="SubmitButton" onclick="formValidation()">Submit</div>
+                        <div id="SubmitButton" onclick="sendMail()">Submit</div>
 
                     </div>
 
