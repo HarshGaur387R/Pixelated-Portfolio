@@ -769,6 +769,47 @@ header {
 
 }
 
+
+#captchaScreen {
+    /* border: 2px solid black; */
+    margin-top: 5px;
+    background-color: #1f1f1f;
+    border-left: 5px solid #000000;
+    border-right: 5px solid #1c1c1c;
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #1c1c1c;
+    height: 2.5em;
+    /* width: 80%; */
+    /* max-width: 11em; */
+    width: 211.6px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin: auto;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#captchaInput{
+    color: rgb(255, 255, 165);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7em;
+    height: 2em;
+    padding: 1px 4px;
+    text-align: center;
+    background-color: rgb(57, 68, 65);
+    border-left: 3px solid rgb(33, 38, 36);
+    border-right: 3px solid rgb(47, 56, 53);
+    border-top: 3px solid rgb(33, 38, 36);
+    border-bottom: 3px solid rgb(47, 56, 53);
+}
+
+#captchaInput::placeholder {
+    color: rgba(143, 143, 143, 0.606);
+}
+
 #SubmitButton {
     user-select: none;
     width: 3.5em;
@@ -1472,7 +1513,7 @@ header {
         margin: auto;
         align-items: center;
 
-        height: 550px;
+        /* height: 550px; */
         /* height: 30em; */
         margin-top: 50px;
         padding: 16px;

@@ -3,6 +3,7 @@ var times = 0;
 var id;
 var current_image_index = 0;
 
+
 const imageElements = ["<img id=\"image\" src=\"images/serviceScreenImages/serviceBotResized.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:40px;\">", "<img id=\"image\" src=\"images/serviceScreenImages/responsiveWebsite.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:0; margin-top:50px;\"></img>", "<img id=\"image\" src=\"images/serviceScreenImages/web3Service.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:25px;\">"];
 
 const serviceDescription = ["I can create Discord bot for you.", "I can create responsive website for you.", "Service will be available soon."];
@@ -191,4 +192,26 @@ function sendMail(){
     else{
         console.log("form is not valid!");
     }
+
+
 }
+
+let captchaText = document.querySelector('#captchaScreen');
+var ctx = captchaText.getContext("2d");
+ctx.font = "35px sans-serif";
+ctx.fillStyle = "yellow";
+
+
+let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+let emptyArr = [];
+
+// This loop generates a random string of 7 characters using alphaNums
+// Further this string is displayed as a CAPTCHA
+
+for (let i = 1; i <= 7; i++) {
+    emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
+    // emptyArr.push("M");
+}
+
+
+ctx.fillText(emptyArr.join(''),captchaText.width/7, captchaText.height/2);
