@@ -699,13 +699,13 @@ header {
 }
 
 
-#emailErrorLabel{
+#emailErrorLabel {
     margin-top: 10px;
     margin-left: 3px;
 }
 
 
-#nameErrorLabel{
+#nameErrorLabel {
     margin-top: 10px;
     margin-left: 3px;
 }
@@ -726,7 +726,8 @@ header {
 
 .retroInput input {
     color: rgb(255, 255, 165);
-    font-family: 'Press Start 2P', cursive;
+    font-family: sans-serif;
+    font-weight: 700;
     font-size: 1em;
     width: 100%;
     height: 2em;
@@ -752,8 +753,9 @@ header {
 
 .retroMessageBox textarea {
     color: rgb(255, 255, 165);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.8em;
+    font-family: cursive;
+    font-size: 1em;
+    font-weight: 900;
     width: 100%;
     height: 10em;
     padding: 10px 1px;
@@ -792,12 +794,19 @@ header {
     right: 0;
 }
 
-#captchaInput{
+#captchaInputBox {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+#captchaInput {
     color: rgb(255, 255, 165);
-    font-family: 'Press Start 2P', cursive;
+    font-family: sans-serif;
+    font-weight: 700;
     font-size: 0.7em;
     height: 2em;
-    padding: 1px 4px;
+    width: 150px;
     text-align: center;
     background-color: rgb(57, 68, 65);
     border-left: 3px solid rgb(33, 38, 36);
@@ -810,12 +819,46 @@ header {
     color: rgba(143, 143, 143, 0.606);
 }
 
+#refreshImageBox {
+    display: inline-block;
+    /* width: 20px; */
+    padding: 3px;
+
+    border-left: 3px solid transparent;
+    border-top: 3px solid rgb(44, 44, 44);
+    border-right: 3px solid rgb(18, 18, 18);
+    border-bottom: 3px solid rgb(18, 18, 18);
+
+    box-shadow: -2px 0 0 0 black,
+        2px 0 0 0 black,
+        0 -2px 0 0 black,
+        0 2px 0 0 black;
+}
+
+#refreshImageBox:hover {
+    background-color: rgb(24, 21, 21);
+
+}
+
+#refreshImageBox:active {
+    border-left: 3px solid rgb(255, 255, 165);
+    background-color: rgb(23, 20, 20);
+
+    border-right: 3px solid rgb(29, 25, 25);
+    border-top: 3px solid rgb(29, 25, 25);
+    border-bottom: 3px solid rgb(29, 25, 25);
+}
+
+#refreshImage {
+    width: 20px;
+}
+
 #SubmitButton {
     user-select: none;
     width: 3.5em;
     margin: 20px 10px 5px;
     padding: 10px;
-
+    display: inline-block;
     background-color: #1f1f1f;
 
     border-left: 3px solid transparent;
@@ -841,6 +884,7 @@ header {
     border-top: 3px solid rgb(29, 25, 25);
     border-bottom: 3px solid rgb(29, 25, 25);
 }
+
 
 
 @media screen and (max-width: 850px) {
@@ -1513,7 +1557,7 @@ header {
         margin: auto;
         align-items: center;
 
-        /* height: 550px; */
+        height: 750px;
         /* height: 30em; */
         margin-top: 50px;
         padding: 16px;
@@ -1568,7 +1612,9 @@ header {
 
     .retroInput input {
         color: rgb(255, 255, 165);
-        font-family: 'Press Start 2P', cursive;
+        /* font-family: 'Press Start 2P', cursive; */
+        font-family: sans-serif;
+        font-weight: 700;
         font-size: 1em;
         width: 100%;
         height: 2em;
@@ -1593,8 +1639,9 @@ header {
 
     .retroMessageBox textarea {
         color: rgb(255, 255, 165);
-        font-family: 'Press Start 2P', cursive;
-        font-size: 0.8em;
+        font-family: cursive;
+        font-size: 1em;
+        font-weight: 900;
         width: 100%;
         height: 10em;
         padding: 10px 1px;

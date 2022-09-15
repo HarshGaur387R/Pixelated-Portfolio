@@ -146,7 +146,9 @@ function formValidation() {
     email = document.getElementById("ei").value;
 
     let message = document.getElementById("ms").value;
+    let captchaInput = document.getElementById("captchaInput").value;
 
+    document.getElementById("captchaError").innerHTML = "";
     document.getElementById("emailErrorLabel").innerHTML = "";
     document.getElementById("nameErrorLabel").innerHTML = "";
 
@@ -178,21 +180,37 @@ function formValidation() {
         return false;
     }
 
+    else if (captchaInput == "" || captchaInput != emptyArr.join('')) {
+        document.getElementById("captchaError").innerHTML = "Invalid Captcha !"
+        // console.log(emptyArr.join('')," : ",captchaInput);
+        return false;
+    }
     else {
-       return true;
+        return true;
     }
 
 };
 
 
-function sendMail(){
-    if(formValidation() == true){
+function sendMail() {
+    if (formValidation() == true) {
         console.log("form is valid");
+        refreshCaptcha();
+
+        window.Email.send({
+            SecureToken: "3b017dd8-7ed2-4097-94ea-729976f97640",
+            To: 'hgaur701@gmail.com',
+            From: 'digitalnausea@gmail.com',
+            Subject: "From Portfolio",
+            Body: `Name: ${document.getElementById('ni').value} <br> Email: ${document.getElementById('ei').value} <br> Message: ${document.getElementById('ms').value}`
+        }).then(
+            message => alert(message)
+        );
     }
-    else{
+    else {
+
         console.log("form is not valid!");
     }
-
 
 }
 
@@ -210,8 +228,21 @@ let emptyArr = [];
 
 for (let i = 1; i <= 7; i++) {
     emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
-    // emptyArr.push("M");
 }
 
 
-ctx.fillText(emptyArr.join(''),captchaText.width/7, captchaText.height/2);
+ctx.fillText(emptyArr.join(''), captchaText.width / 7, captchaText.height / 2);
+
+
+function refreshCaptcha() {
+
+    document.getElementById("captchaInput").value = "";
+
+    emptyArr = [];
+
+    for (let j = 1; j <= 7; j++) {
+        emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
+    }
+    ctx.clearRect(0, 0, captchaText.width, captchaText.height);
+    ctx.fillText(emptyArr.join(''), captchaText.width / 4, captchaText.height / 2);
+}

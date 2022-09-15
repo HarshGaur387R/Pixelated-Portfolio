@@ -218,8 +218,8 @@
                             </div>
                             <div class="retroInput" oncontextmenu="return false" onselectstart="return false"
                                 onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
-                                <input id="ni" name="nameInput"
-                                    placeholder="Erwin Smith" autocomplete="off" maxlength="26">
+                                <input id="ni" name="nameInput" placeholder="Erwin Smith" autocomplete="off"
+                                    maxlength="26">
                             </div>
                         </div>
 
@@ -229,8 +229,8 @@
                             </div>
                             <div class="retroInput" oncontextmenu="return false" onselectstart="return false"
                                 onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
-                                <input id="ei" name="emailInput" type="email"
-                                    placeholder="Esmith@gmail.com" autocomplete="off" maxlength="26">
+                                <input id="ei" name="emailInput" type="email" placeholder="Esmith@gmail.com"
+                                    autocomplete="off" maxlength="100">
                             </div>
                         </div>
 
@@ -239,14 +239,21 @@
                                 <label for="message">Message</label>
                             </div>
                             <div class="retroMessageBox">
-                                <textarea id="ms" name="message" placeholder="My soldiers rage..." maxlength="200"></textarea>
+                                <textarea id="ms" name="message" placeholder="My soldiers rage..."
+                                    maxlength="200"></textarea>
                             </div>
                         </div>
 
                         <div id="captchaBox">
                             <canvas id="captchaScreen"></canvas>
                             <br>
-                            <input type="text" id="captchaInput" autocomplete="off" maxlength="7" placeholder="7 letter code">
+                            <div id="captchaInputBox">
+                                <input type="text" id="captchaInput" autocomplete="off" maxlength="7"
+                                    placeholder="7 letter code">
+                                <div onclick="refreshCaptcha()" id="refreshImageBox"><img id="refreshImage"
+                                        src="images/refresh-2-64.png" alt="refresh">
+                                </div>
+                            </div>
                             <div id="captchaError"></div>
                         </div>
 
@@ -262,6 +269,7 @@
 
     </div>
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
