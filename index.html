@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <div id="popUp"><span id="clsBtn">&times;</span>
+        <strong id="popUpMessage"> Mail Successfully SENT !</strong>
+    </div>
     <div id="container">
         <div id="navbarHolder">
             <header>
@@ -247,7 +250,8 @@
                         <div id="captchaBox">
                             <canvas id="captchaScreen"></canvas>
                             <br>
-                            <div id="captchaInputBox">
+                            <div id="captchaInputBox" oncontextmenu="return false" onselectstart="return false"
+                                onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
                                 <input type="text" id="captchaInput" autocomplete="off" maxlength="7"
                                     placeholder="7 letter code">
                                 <div onclick="refreshCaptcha()" id="refreshImageBox"><img id="refreshImage"
@@ -257,7 +261,10 @@
                             <div id="captchaError"></div>
                         </div>
 
-                        <div id="SubmitButton" onclick="sendMail()">Submit</div>
+                        <!-- <div id="popUpMessage"><span id="clsBtn">&times;</span>
+                            <strong>Successfully SENT !</strong>
+                        </div> -->
+                        <div id="SubmitButton">Submit</div>
 
                     </div>
 

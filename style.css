@@ -802,7 +802,7 @@ header {
 
 #captchaInput {
     color: rgb(255, 255, 165);
-    font-family: sans-serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
     font-weight: 700;
     font-size: 0.7em;
     height: 2em;
@@ -813,6 +813,7 @@ header {
     border-right: 3px solid rgb(47, 56, 53);
     border-top: 3px solid rgb(33, 38, 36);
     border-bottom: 3px solid rgb(47, 56, 53);
+    user-select: none;
 }
 
 #captchaInput::placeholder {
@@ -886,6 +887,37 @@ header {
 }
 
 
+
+#clsBtn {
+    margin-top: -3px;
+    margin-right: 45px;
+    color: white;
+    float: right;
+    font-size: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#popUp{
+    display: none;
+    position: fixed;
+    z-index: 11;
+    left: 50%;
+    right: 50%;
+    width: 100%;
+    margin-left: -50%;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.6s;
+    line-height: 20px;
+
+    text-align: center;
+    color: white;
+    background-color: #04AA6D;
+    font-family: 'Pixeboy-z8XGD';
+
+}
 
 @media screen and (max-width: 850px) {
     /* @font-face {

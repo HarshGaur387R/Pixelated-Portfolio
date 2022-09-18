@@ -192,20 +192,75 @@ function formValidation() {
 };
 
 
-function sendMail() {
+document.getElementById('SubmitButton').addEventListener('click', sendMail);
+
+document.getElementById('clsBtn').addEventListener('click', () => { document.getElementById('popUp').style.display = "none" });
+
+function popupFunction(message) {
+    let popUp = document.getElementById('popUp');
+
+    console.log(message);
+    if (message == "OK") {
+        popUp.style.display = "initial";
+    }
+    else {
+        popUp.style.backgroundColor = "red";
+        document.getElementById('popUpMessage').innerHTML = "Error Mail Not Sent !"
+        popUp.style.display = "initial";
+        alert(message);
+    }
+}
+
+
+async function sendMail() {
+
     if (formValidation() == true) {
         console.log("form is valid");
         refreshCaptcha();
 
-        window.Email.send({
+
+        let submitBtn = document.getElementById('SubmitButton');
+        submitBtn.style.color = "gray";
+
+        submitBtn.removeEventListener('click', sendMail);
+
+        await window.Email.send({
             SecureToken: "3b017dd8-7ed2-4097-94ea-729976f97640",
             To: 'hgaur701@gmail.com',
             From: 'digitalnausea@gmail.com',
             Subject: "From Portfolio",
             Body: `Name: ${document.getElementById('ni').value} <br> Email: ${document.getElementById('ei').value} <br> Message: ${document.getElementById('ms').value}`
         }).then(
-            message => alert(message)
+            // message => alert(message)
+            message => popupFunction(message)
         );
+
+        submitBtn.style.color = "yellow";
+        submitBtn.addEventListener('click', sendMail);
+
+        //TODO : create mail sent successfully pop up.
+
+        //********************************* FOR TESTING *****************************
+        // let index = 0;
+        // let interval = setInterval(waitingTest, 50);
+
+        // function waitingTest() {
+        //     submitBtn.style.color = "gray";
+        //     console.log("lol");
+
+        //     if (index > 10) {
+
+        //         clearInterval(interval);
+        //         submitBtn.style.color = "yellow";
+        //     }
+        //     index++;
+        // }
+        //**************************************************************************
+
+        document.getElementById('ei').value = "";
+        document.getElementById('ni').value = "";
+        document.getElementById('ms').value = "";
+
     }
     else {
 
@@ -216,7 +271,7 @@ function sendMail() {
 
 let captchaText = document.querySelector('#captchaScreen');
 var ctx = captchaText.getContext("2d");
-ctx.font = "35px sans-serif";
+ctx.font = "35px Georgia";
 ctx.fillStyle = "yellow";
 
 
