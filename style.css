@@ -661,7 +661,7 @@ header {
     margin: auto;
     align-items: center;
 
-    height: 700px;
+    /* height: 700px; */
     /* height: 30em; */
     margin-top: 50px;
     padding: 16px;
