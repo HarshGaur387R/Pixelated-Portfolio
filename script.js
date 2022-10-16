@@ -8,6 +8,12 @@ const imageElements = ["<img id=\"image\" src=\"images/serviceScreenImages/servi
 
 const serviceDescription = ["I can create Discord bot for you.", "I can create responsive website for you.", "Service will be available soon."];
 
+
+window.addEventListener('load',(e)=>{
+    document.getElementById('loadingScreen').style.display = 'none';
+});
+
+
 function closeSidebar() {
     document.getElementById("sidebar").style.transform = "translate(-200px)";
     document.getElementById("cross").style.transform = "translate(-200px)";
