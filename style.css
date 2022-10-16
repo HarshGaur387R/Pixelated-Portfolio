@@ -455,6 +455,8 @@ header {
     border-right: 5px solid #1c1c1c;
     border-top: 5px solid #000000;
     border-bottom: 5px solid #1c1c1c;
+    cursor:pointer;
+
 }
 
 .projectDetail {
@@ -1406,8 +1408,8 @@ object{
         border-bottom: 5px solid #1c1c1c;
         display: flex;
     }
-
-
+    
+    
     .projectDetail {
         margin: 3px;
         margin-left: -3px;

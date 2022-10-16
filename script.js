@@ -9,10 +9,20 @@ const imageElements = ["<img id=\"image\" src=\"images/serviceScreenImages/servi
 const serviceDescription = ["I can create Discord bot for you.", "I can create responsive website for you.", "Service will be available soon."];
 
 
-window.addEventListener('load',(e)=>{
+const projectsLink = ['https://github.com/HarshGaur387R/PythonDiscordBot','https://github.com/HarshGaur387R/Calculator','https://github.com/HarshGaur387R/Snake-Game','',''];
+
+window.addEventListener('load', (e) => {
     document.getElementById('loadingScreen').style.display = 'none';
 });
 
+let projectCards = Array(document.getElementsByClassName('projectCards'));
+projectCards = Array.from(projectCards[0]);
+
+projectCards.forEach((e, index) => { 
+    e.addEventListener('click',(ev)=>{
+        window.open(`${projectsLink[index]}`, '_blank');
+    });
+});
 
 function closeSidebar() {
     document.getElementById("sidebar").style.transform = "translate(-200px)";
