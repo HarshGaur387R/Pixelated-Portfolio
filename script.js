@@ -9,7 +9,7 @@ const imageElements = ["<img id=\"image\" src=\"images/serviceScreenImages/servi
 const serviceDescription = ["I can create Discord bot for you.", "I can create responsive website for you.", "Service will be available soon."];
 
 
-const projectsLink = ['https://github.com/HarshGaur387R/PythonDiscordBot','https://github.com/HarshGaur387R/Calculator','https://github.com/HarshGaur387R/Snake-Game','',''];
+const projectsLink = ['https://github.com/HarshGaur387R/PythonDiscordBot', 'https://github.com/HarshGaur387R/Calculator', 'https://github.com/HarshGaur387R/Snake-Game', '', ''];
 
 window.addEventListener('load', (e) => {
     document.getElementById('loadingScreen').style.display = 'none';
@@ -18,8 +18,8 @@ window.addEventListener('load', (e) => {
 let projectCards = Array(document.getElementsByClassName('projectCards'));
 projectCards = Array.from(projectCards[0]);
 
-projectCards.forEach((e, index) => { 
-    e.addEventListener('click',(ev)=>{
+projectCards.forEach((e, index) => {
+    e.addEventListener('click', (ev) => {
         window.open(`${projectsLink[index]}`, '_blank');
     });
 });
@@ -39,15 +39,10 @@ function openSidebar() {
 
 function state() {
 
-    var screen = document.getElementById("CSStext");
+    var screen = document.getElementById("myIntro");
     if (isInViewPort(screen) && times == 0) {
         times = 1;
         move();
-    }
-    else if (isInViewPort(screen) && times == 1) {
-        clearInterval(id);
-        move();
-
     }
 
     closeSidebar();
@@ -56,39 +51,37 @@ function state() {
 function move() {
 
     let r = document.querySelector(':root');
-    let rs = getComputedStyle(r);
+    let meterTexts = document.querySelectorAll(".meterText");
 
-    let HTMLelement = document.getElementById("HTMLtext");
-    let CSSelement = document.getElementById("CSStext");
-    let JSelement = document.getElementById("JStext");
+    // Extract target values from meterText elements and initialize counters
+    let targetValues = [];
+    let currentValues = [];
 
-    let counter = 0;
-    let width = 0;
+    meterTexts.forEach((text, index) => {
+        let targetPercent = parseInt(text.innerText);
+        targetValues.push(targetPercent);
+        currentValues.push(0);
+        text.innerText = '0%';
+    });
 
+    let cssProps = ["--hpos", "--cpos", "--jpos", "--gopos", "--cppos", "--luapos"];
     id = setInterval(frame, 20);
 
     function frame() {
-        if (width == 100) {
+        let allDone = true;
+
+        for (let i = 0; i < currentValues.length; i++) {
+            if (currentValues[i] < targetValues[i]) {
+                currentValues[i]++;
+                meterTexts[i].innerText = currentValues[i] + '%';
+                r.style.setProperty(cssProps[i], currentValues[i] + '%');
+                allDone = false;
+            }
+        }
+
+        if (allDone) {
             clearInterval(id);
         }
-        else {
-            width++;
-            counter++;
-
-            if (width <= 95) {
-                HTMLelement.innerText = counter + '%';
-                r.style.setProperty("--hpos", width + '%');
-            }
-            if (width <= 80) {
-                CSSelement.innerText = counter + '%';
-                r.style.setProperty("--cpos", width + '%');
-            }
-            if (width <= 90) {
-                JSelement.innerText = counter + '%';
-                r.style.setProperty("--jpos", width + '%');
-            }
-        }
-
     }
 
 }
