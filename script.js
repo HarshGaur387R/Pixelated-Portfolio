@@ -2,6 +2,7 @@ var sidebarState;
 var times = 0;
 var id;
 var current_image_index = 0;
+var progressBarAnimated = false;
 
 
 const imageElements = ["<img id=\"image\" src=\"images/serviceScreenImages/serviceBotResized.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:40px;\">", "<img id=\"image\" src=\"images/serviceScreenImages/responsiveWebsite.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:0; margin-top:50px;\"></img>", "<img id=\"image\" src=\"images/serviceScreenImages/web3Service.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:25px;\">"];
@@ -45,6 +46,16 @@ function state() {
         move();
     }
 
+    // Animate progress bars when Framework section comes into view
+    if (!progressBarAnimated) {
+        var frameworkSections = document.querySelectorAll("#myIntro");
+        var lastSection = frameworkSections[frameworkSections.length - 1];
+        if (lastSection && isInViewPort(lastSection)) {
+            progressBarAnimated = true;
+            animateProgressBars(lastSection);
+        }
+    }
+
     closeSidebar();
 }
 
@@ -84,6 +95,26 @@ function move() {
         }
     }
 
+}
+
+function animateProgressBars(section) {
+    const skillMeters = section.querySelectorAll(".skillMeter");
+    const targetFills = [9, 8, 7, 9, 8, 10, 8, 7, 6]; // NextJs: 90%, Expo: 80%, Fyne Go: 70%
+
+    skillMeters.forEach((meter, meterIndex) => {
+        const progressBoxes = meter.querySelectorAll(".progressBox");
+        const targetFill = targetFills[meterIndex];
+        let currentFill = 0;
+
+        const fillInterval = setInterval(() => {
+            if (currentFill < targetFill) {
+                progressBoxes[currentFill].style.backgroundColor = "yellow";
+                currentFill++;
+            } else {
+                clearInterval(fillInterval);
+            }
+        }, 80);
+    });
 }
 
 function isInViewPort(element) {
