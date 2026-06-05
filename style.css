@@ -17,6 +17,10 @@
     src: url('pixeboy-font/Pixeboy-z8XGD.ttf');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(48, 45, 45);
 }
@@ -42,49 +46,60 @@ body {
     width: 100%;
 }
 
-#navbarHolder {
-    z-index: 9;
-}
-
-#hamburger {
-    display: none;
-}
-
-#cross {
-    display: none;
-}
-
-#sidebar {
-    display: none;
-}
 
 header {
     top: 0;
     width: 100%;
+    background-color: rgb(32, 28, 28);
     position: fixed;
     z-index: 8;
 }
 
+.arrowContainer {
+    /* background-color: #04AA6D; */
+    display: none;
+    width: 100%;
+    text-align: center;
+}
 
-#navbar {
+#upIcon {
+    display: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transform: scaleY(-1);
+}
+
+#downIcon {
+    display: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#listOfNavigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar {
     font-family: 'Pixeboy-z8XGD';
     background-color: rgb(32, 28, 28);
     color: yellow;
 }
 
-#navbar ul {
+/* .navbar ul {
     overflow: auto;
     overflow: hidden;
-}
+} */
 
-#navbar li {
-    float: left;
+.navbar li {
     list-style: none;
     margin: 15px 3px;
-
+    /* padding: 20px; */
 }
 
-#navbar li a {
+.navbar li a {
     background-color: rgb(48, 45, 45);
     color: yellow;
     padding: 10px 36px;
@@ -101,7 +116,7 @@ header {
     border-bottom: 4px solid rgb(18, 18, 18);
 }
 
-#navbar a:hover {
+.navbar a:hover {
 
     background-color: rgb(29, 25, 25);
 
@@ -110,7 +125,7 @@ header {
 
 }
 
-#navbar a:active {
+.navbar a:active {
     border-left: 3px solid rgb(255, 255, 165);
     background-color: rgb(23, 20, 20);
 
@@ -175,10 +190,19 @@ header {
     border-bottom: 5px solid #1c1c1c;
 }
 
-#boxesWrapper img {
+.socialMediaButtonsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#boxesWrapper a {
+    text-decoration: none;
     margin: 20px 10px 5px;
-    padding: 2%;
-    width: 2%;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
 
     border-left: 3px solid transparent;
     border-top: 3px solid rgb(44, 44, 44);
@@ -191,12 +215,17 @@ header {
         0 2px 0 0 black;
 }
 
-#boxesWrapper img:hover {
+#boxesWrapper a img {
+    width: 100%;
+    height: auto;
+}
+
+#boxesWrapper a:hover {
     background-color: rgb(24, 21, 21);
     text-shadow: 1px 1px 20px rgb(255, 255, 0);
 }
 
-#boxesWrapper img:active {
+#boxesWrapper a:active {
     border-left: 3px solid rgb(255, 255, 165);
     background-color: rgb(23, 20, 20);
 
@@ -778,7 +807,7 @@ header {
     border-top: 5px solid #000000;
     border-bottom: 5px solid #1c1c1c;
     height: 2.5em;
-   
+
     width: 211.6px;
     font-size: 30px;
     letter-spacing: 3px;
@@ -851,7 +880,7 @@ header {
 
 #SubmitButton {
     user-select: none;
-    width: 3.5em;
+    width: 200px;
     margin: 20px 10px 5px;
     padding: 10px;
     display: inline-block;
@@ -917,63 +946,131 @@ header {
 
 .loadingScreen {
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgb(48, 45, 45);
     z-index: 100;
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .loadingAnimation {
-    margin: auto;
-    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     background-color: rgb(48, 45, 45);
 }
 
 object {
-    margin-top: 20vh;
-
+    width: 40vh;
+    height: 20vh;
+    margin: 0;
+    padding: 0;
 }
 
 /* RESPONSIVE LOGIC */
 
-@media screen and (max-width: 1200px){
-    #home{
-        background-color: red;
+@media screen and (min-width: 700px) {
+    #listOfNavigation {
+        /* background-color: #04AA6D; */
+        display: flex !important;
+    }
+
+    .arrowContainer {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #home {
+        /* background-color: red; */
         width: 720px;
     }
-    .myIntro{
+
+    .myIntro {
         width: 720px;
     }
-    #projects{
+
+    #boxesWrapper a{
+        width: 30px;
+        height: 30px;
+    }
+
+    #projects {
         width: 720px;
     }
-    .ProjectImage img{
+
+    .ProjectImage img {
         min-width: 200px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    #home{
-        background-color: green;
+
+    #home {
+        /* background-color: green; */
         width: 600px;
         flex-direction: column;
     }
-    .myIntro{
+
+    .myIntro {
         width: 600px;
     }
-    #projects{
+
+    #projects {
         width: 600px;
     }
-    .ProjectImage img{
+
+    .ProjectImage img {
         min-width: 150px;
     }
 }
 
-@media screen and (max-width: 700px){
-    #home{
-        background-color: yellow;
+@media screen and (max-width: 700px) {
+
+    /* header {
+        background-color: red;
+        height: 100%;
+    } */
+
+    #listOfNavigation {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #listOfNavigation li {
+        width: 70%;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+    }
+
+    #listOfNavigation li a {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .arrowContainer {
+        display: block;
+    }
+
+    #downIcon {
+        display: initial;
+    }
+
+    #home {
+        /* background-color: yellow; */
         width: 400px;
         flex-direction: column;
     }
@@ -981,29 +1078,113 @@ object {
     .myIntro {
         width: 400px;
     }
-    #projects{
+
+    #projects {
         width: 400px;
     }
-    #projectsHolder{
+
+    #projectsHolder {
         grid-template-columns: auto;
     }
-    .progressBar{
+
+    .progressBar {
         gap: 1px;
     }
-    .progressBox{
+
+    .progressBox {
         width: 5px;
         height: 5px;
     }
-    #meters{
+
+    #meters {
         gap: 5px;
     }
 
-    #services{
+    #services {
         width: 400px;
-        background-color: red;
+        /* background-color: red; */
     }
 
-    #serviceDescription{
+    #serviceDescription {
         line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #home {
+        /* background-color: purple; */
+        width: 310px;
+        flex-direction: column;
+    }
+
+    .myIntro {
+        width: 310px;
+    }
+
+    #descriptBox {
+        font-size: medium;
+    }
+
+    #projects {
+        width: 310px;
+    }
+
+    #projectsHolder {
+        grid-template-columns: auto;
+    }
+
+    #MyImpSkills {
+        font-size: large;
+    }
+
+    #myProjectHeader {
+        font-size: large;
+    }
+
+    .progressBarMetersContainer {
+        grid-template-columns: auto auto !important;
+    }
+
+    .progressBar {
+        gap: 1px;
+    }
+
+    .progressBox {
+        width: 5px;
+        height: 5px;
+    }
+
+    #meters {
+        gap: 5px;
+    }
+
+    #services {
+        width: 310px;
+        /* background-color: red; */
+    }
+
+    #servicesHeader {
+        font-size: large;
+    }
+
+    #serviceDescription {
+        line-height: 18px;
+    }
+
+    #contactHeader {
+        font-size: large;
+    }
+
+    .meterScale {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .meterText {
+        font-size: medium;
+    }
+
+    object {
+        width: 20vh;
     }
 }

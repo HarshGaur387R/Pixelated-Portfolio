@@ -16,7 +16,6 @@
 
 <body>
     <div class="loadingScreen" id="loadingScreen">
-
         <div class="loadingAnimation" id="loadingAnimation">
 
             <object type="image/svg+xml" data="loadingBot.svg">
@@ -30,31 +29,24 @@
     <div id="popUp"><span id="clsBtn">&times;</span>
         <strong id="popUpMessage"> Mail Successfully SENT !</strong>
     </div>
+
     <div id="container">
         <header>
-            <nav id="navbar">
-                <ul>
+            <nav class="navbar">
+                <ul id="listOfNavigation">
                     <li><a href="#home">My Intro</a></li>
                     <li><a href="#myIntro">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <img onclick="openSidebar()" id="hamburger" src="images/hamburger.png" alt="ham">
-                <img onclick="closeSidebar()" id="cross" src="images/cross.png" alt="cross">
+                <div class="arrowContainer">
+                    <img onclick="slideDown()" id="downIcon" src="images/down-arrow.png" alt="down-arrow">
+                    <img onclick="slideUp()" id="upIcon" src="images/down-arrow.png" alt="up-arrow">
+                </div>
             </nav>
         </header>
 
-        <div id="sidebar">
-            <div id="emptyDiv" style="margin-top: 50px;"></div>
-            <ul id="list">
-                <li onclick="changeLocation('home')"><a>MyIntro</a></li>
-                <li onclick="changeLocation('myIntro')"><a>Skills</a></li>
-                <li onclick="changeLocation('projects')"><a>Projects</a></li>
-                <li onclick="changeLocation('services')"><a>Services</a></li>
-                <li onclick="changeLocation('contact')"><a>Contact</a></li>
-            </ul>
-        </div>
         <div id="main">
             <div id="wrapper">
 
@@ -82,14 +74,21 @@
                             excellence to every endeavor.
                         </div>
 
-                        <a id="twitterImage" href="https://twitter.com/hgaur701" target="_blank"><img
-                                src="images/twitter-xl.png" alt="twitter"></a>
-                        <a id="githubImage" href="https://github.com/HarshGaur387R" target="_blank"><img
-                                src="images/github-11-xl.png" alt="github"></a>
-                        <a id="linkedinImage" href="https://www.linkedin.com/in/harsh-gaur-a0b525217/"
-                            target="_blank"><img src="images/linkedin-6-xl.png" alt="linkedin"></a>
-                        <a id="facebookImage" href="https://www.facebook.com/harsh.gaur.1656" target="_blank"><img
-                                src="images/facebook-xl.png" alt="facebook"></a>
+                        <div class="socialMediaButtonsContainer">
+                            <a id="twitterImage" href="https://twitter.com/hgaur701" target="_blank">
+                                <img src="images/twitter-xl.png" alt="twitter">
+                            </a>
+                            <a id="githubImage" href="https://github.com/HarshGaur387R" target="_blank">
+                                <img src="images/github-11-xl.png" alt="github">
+                            </a>
+                            <a id="linkedinImage" href="https://www.linkedin.com/in/harsh-gaur-a0b525217/"
+                                target="_blank">
+                                <img src="images/linkedin-6-xl.png" alt="linkedin">
+                            </a>
+                            <a id="facebookImage" href="https://www.facebook.com/harsh.gaur.1656" target="_blank">
+                                <img src="images/facebook-xl.png" alt="facebook">
+                            </a>
+                        </div>
 
                     </div>
                 </div>
@@ -401,57 +400,7 @@
                     <div id="contactHeader">get in touch</div>
 
                     <div id="contactform">
-                        <div class="retroInputBox">
-                            <div class="retroLabel">
-                                <label for="nameInput">Name</label><span id="nameErrorLabel"></span>
-                            </div>
-                            <div class="retroInput" oncontextmenu="return false" onselectstart="return false"
-                                onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
-                                <input id="ni" name="nameInput" placeholder="Erwin Smith" autocomplete="off"
-                                    maxlength="26">
-                            </div>
-                        </div>
-
-                        <div class="retroInputBox">
-                            <div class="retroLabel">
-                                <label for="emailInput">Email</label><span id="emailErrorLabel"></span>
-                            </div>
-                            <div class="retroInput" oncontextmenu="return false" onselectstart="return false"
-                                onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
-                                <input id="ei" name="emailInput" type="email" placeholder="Esmith@gmail.com"
-                                    autocomplete="off" maxlength="100">
-                            </div>
-                        </div>
-
-                        <div class="retroInputBox">
-                            <div class="retroLabel">
-                                <label for="message">Message</label>
-                            </div>
-                            <div class="retroMessageBox">
-                                <textarea id="ms" name="message" placeholder="My soldiers rage..."
-                                    maxlength="200"></textarea>
-                            </div>
-                        </div>
-
-                        <div id="captchaBox">
-                            <canvas id="captchaScreen"></canvas>
-                            <br>
-                            <div id="captchaInputBox" oncontextmenu="return false" onselectstart="return false"
-                                onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
-                                <input type="text" id="captchaInput" autocomplete="off" maxlength="7"
-                                    placeholder="7 letter code">
-                                <div onclick="refreshCaptcha()" id="refreshImageBox"><img id="refreshImage"
-                                        src="images/refresh-2-64.png" alt="refresh">
-                                </div>
-                            </div>
-                            <div id="captchaError"></div>
-                        </div>
-
-                        <!-- <div id="popUpMessage"><span id="clsBtn">&times;</span>
-                            <strong>Successfully SENT !</strong>
-                        </div> -->
                         <div id="SubmitButton">Submit</div>
-
                     </div>
 
 

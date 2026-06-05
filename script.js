@@ -25,17 +25,17 @@ projectCards.forEach((e, index) => {
     });
 });
 
-function closeSidebar() {
-    document.getElementById("sidebar").style.transform = "translate(-200px)";
-    document.getElementById("cross").style.transform = "translate(-200px)";
-    document.getElementById("hamburger").style.transform = "translate(0px)";
-
+function slideDown() {
+    document.getElementById("downIcon").style.display = "none";
+    document.getElementById("upIcon").style.display = "initial";
+    document.getElementById("listOfNavigation").style.display = "flex"
 }
 
-function openSidebar() {
-    document.getElementById("sidebar").style.transform = "translate(0px)";
-    document.getElementById("cross").style.transform = "translate(0px)";
-    document.getElementById("hamburger").style.transform = "translate(-200px)";
+function slideUp() {
+    document.getElementById("downIcon").style.display = "initial";
+    document.getElementById("upIcon").style.display = "none";
+    document.getElementById("listOfNavigation").style.display = "none"
+
 }
 
 function state() {
@@ -177,167 +177,9 @@ const changeLocation = (link) => {
 }
 
 
-function formValidation() {
-
-    let name = "";
-    name = document.getElementById("ni").value;
-
-    let email = "";
-    email = document.getElementById("ei").value;
-
-    let message = document.getElementById("ms").value;
-    let captchaInput = document.getElementById("captchaInput").value;
-
-    document.getElementById("captchaError").innerHTML = "";
-    document.getElementById("emailErrorLabel").innerHTML = "";
-    document.getElementById("nameErrorLabel").innerHTML = "";
-
-    let format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-    let numbers = /[1234567890]/;
-
-    if (name == "") {
-        document.getElementById("nameErrorLabel").innerHTML = "!! Empty Name"
-        return false;
-    }
-
-    else if (format.test(name) || numbers.test(name)) {
-        document.getElementById("nameErrorLabel").innerHTML = "!! Use Only Alphabets";
-        return false;
-    }
-
-    else if (email == "") {
-        document.getElementById("emailErrorLabel").innerHTML = "!! Empty Email";
-        return false;
-    }
-
-    else if (email.indexOf('@') <= 0 || email.indexOf('.') <= 0) {
-        document.getElementById("emailErrorLabel").innerHTML = "!! Wrong Email";
-        return false;
-    }
-
-    else if (email.slice(email.lastIndexOf('.'), email.length).length - 1 < 2 || email.slice(email.lastIndexOf('.'), email.length).length - 1 > 3) {
-        document.getElementById("emailErrorLabel").innerHTML = "!! Wrong Email";
-        return false;
-    }
-
-    else if (captchaInput == "" || captchaInput != emptyArr.join('')) {
-        document.getElementById("captchaError").innerHTML = "Invalid Captcha !"
-        // console.log(emptyArr.join('')," : ",captchaInput);
-        return false;
-    }
-    else {
-        return true;
-    }
-
-};
-
 
 document.getElementById('SubmitButton').addEventListener('click', sendMail);
 
-document.getElementById('clsBtn').addEventListener('click', () => { document.getElementById('popUp').style.display = "none" });
-
-function popupFunction(message) {
-    let popUp = document.getElementById('popUp');
-
-    console.log(message);
-    if (message == "OK") {
-        popUp.style.display = "initial";
-    }
-    else {
-        popUp.style.backgroundColor = "red";
-        document.getElementById('popUpMessage').innerHTML = "Error Mail Not Sent !"
-        popUp.style.display = "initial";
-        alert(message);
-    }
-}
-
-
 async function sendMail() {
-
-    if (formValidation() == true) {
-        console.log("form is valid");
-        refreshCaptcha();
-
-
-        let submitBtn = document.getElementById('SubmitButton');
-        submitBtn.style.color = "gray";
-
-        submitBtn.removeEventListener('click', sendMail);
-
-        await window.Email.send({
-            SecureToken: "3b017dd8-7ed2-4097-94ea-729976f97640",
-            To: 'hgaur701@gmail.com',
-            From: 'digitalnausea@gmail.com',
-            Subject: "From Portfolio",
-            Body: `Name: ${document.getElementById('ni').value} <br> Email: ${document.getElementById('ei').value} <br> Message: ${document.getElementById('ms').value}`
-        }).then(
-            // message => alert(message)
-            message => popupFunction(message)
-        );
-
-        submitBtn.style.color = "yellow";
-        submitBtn.addEventListener('click', sendMail);
-
-        //TODO : create mail sent successfully pop up.
-
-        //********************************* FOR TESTING *****************************
-        // let index = 0;
-        // let interval = setInterval(waitingTest, 50);
-
-        // function waitingTest() {
-        //     submitBtn.style.color = "gray";
-        //     console.log("lol");
-
-        //     if (index > 10) {
-
-        //         clearInterval(interval);
-        //         submitBtn.style.color = "yellow";
-        //     }
-        //     index++;
-        // }
-        //**************************************************************************
-
-        document.getElementById('ei').value = "";
-        document.getElementById('ni').value = "";
-        document.getElementById('ms').value = "";
-
-    }
-    else {
-
-        console.log("form is not valid!");
-    }
-
-}
-
-let captchaText = document.querySelector('#captchaScreen');
-var ctx = captchaText.getContext("2d");
-ctx.font = "35px Georgia";
-ctx.fillStyle = "yellow";
-
-
-let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-let emptyArr = [];
-
-// This loop generates a random string of 7 characters using alphaNums
-// Further this string is displayed as a CAPTCHA
-
-for (let i = 1; i <= 7; i++) {
-    emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
-}
-
-
-ctx.fillText(emptyArr.join(''), captchaText.width / 7, captchaText.height / 2);
-
-
-function refreshCaptcha() {
-
-    document.getElementById("captchaInput").value = "";
-
-    emptyArr = [];
-
-    for (let j = 1; j <= 7; j++) {
-        emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
-    }
-    ctx.clearRect(0, 0, captchaText.width, captchaText.height);
-    ctx.fillText(emptyArr.join(''), captchaText.width / 4, captchaText.height / 2);
+    window.location.href = "mailto:hgaur701@gmail.com"
 }
