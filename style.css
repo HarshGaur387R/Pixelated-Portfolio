@@ -125,8 +125,6 @@ header {
     flex-direction: row;
     gap: 40px;
     color: yellow;
-    margin-top: 50px;
-    padding: 16px;
 
     border: 2px solid;
     margin: auto;
@@ -226,7 +224,7 @@ header {
     /* margin-bottom: 5px; */
 }
 
-#myIntro {
+.myIntro {
     color: yellow;
     border: 2px solid;
     margin: auto;
@@ -266,7 +264,7 @@ header {
 }
 
 .skillMeter {
-    width: 100%;
+    width: calc(100% - 10px);
     padding: 10px 0px 10px 0px;
     margin-top: 20px;
     background-color: #1f1f1f;
@@ -332,6 +330,7 @@ header {
 }
 
 /* Progress Bar Styles */
+
 .progressBar {
     display: flex;
     gap: 8px;
@@ -352,39 +351,39 @@ header {
 }
 
 /* Framework section - Fill boxes based on percentage */
-#myIntro:last-of-type #meters>.skillMeter:nth-child(1) .progressBox:nth-child(-n+9) {
+.myIntro:last-of-type #meters>.skillMeter:nth-child(1) .progressBox:nth-child(-n+9) {
     background-color: yellow;
 }
 
-#myIntro:last-of-type #meters>.skillMeter:nth-child(2) .progressBox:nth-child(-n+8) {
+.myIntro:last-of-type #meters>.skillMeter:nth-child(2) .progressBox:nth-child(-n+8) {
     background-color: yellow;
 }
 
-#myIntro:last-of-type #meters>.skillMeter:nth-child(3) .progressBox:nth-child(-n+7) {
+.myIntro:last-of-type #meters>.skillMeter:nth-child(3) .progressBox:nth-child(-n+7) {
     background-color: yellow;
 }
 
-#myIntro:last-of-type #meters>.skillMeter:nth-child(4) .progressBox:nth-child(-n+9) {
+.myIntro:last-of-type #meters>.skillMeter:nth-child(4) .progressBox:nth-child(-n+9) {
     background-color: yellow;
 }
 
-#myIntro:last-of-type #meters>.skillMeter:nth-child(2) .progressBox:nth-child(-n+8) {
+.myIntro:last-of-type #meters>.skillMeter:nth-child(2) .progressBox:nth-child(-n+8) {
     background-color: yellow;
 }
 
-#myIntro:last-of-type #meters>.skillMeter:nth-child(3) .progressBox:nth-child(-n+10) {
+.myIntro:last-of-type #meters>.skillMeter:nth-child(3) .progressBox:nth-child(-n+10) {
     background-color: yellow;
 }
 
-#myIntro:last-of-type #meters>.skillMeter:nth-child(3) .progressBox:nth-child(-n+8) {
+.myIntro:last-of-type #meters>.skillMeter:nth-child(3) .progressBox:nth-child(-n+8) {
     background-color: yellow;
 }
 
-#myIntro:last-of-type #meters>.skillMeter:nth-child(3) .progressBox:nth-child(-n+7) {
+.myIntro:last-of-type #meters>.skillMeter:nth-child(3) .progressBox:nth-child(-n+7) {
     background-color: yellow;
 }
 
-#myIntro:last-of-type #meters>.skillMeter:nth-child(3) .progressBox:nth-child(-n+6) {
+.myIntro:last-of-type #meters>.skillMeter:nth-child(3) .progressBox:nth-child(-n+6) {
     background-color: yellow;
 }
 
@@ -935,4 +934,76 @@ header {
 object {
     margin-top: 20vh;
 
+}
+
+/* RESPONSIVE LOGIC */
+
+@media screen and (max-width: 1200px){
+    #home{
+        background-color: red;
+        width: 720px;
+    }
+    .myIntro{
+        width: 720px;
+    }
+    #projects{
+        width: 720px;
+    }
+    .ProjectImage img{
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #home{
+        background-color: green;
+        width: 600px;
+        flex-direction: column;
+    }
+    .myIntro{
+        width: 600px;
+    }
+    #projects{
+        width: 600px;
+    }
+    .ProjectImage img{
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #home{
+        background-color: yellow;
+        width: 400px;
+        flex-direction: column;
+    }
+
+    .myIntro {
+        width: 400px;
+    }
+    #projects{
+        width: 400px;
+    }
+    #projectsHolder{
+        grid-template-columns: auto;
+    }
+    .progressBar{
+        gap: 1px;
+    }
+    .progressBox{
+        width: 5px;
+        height: 5px;
+    }
+    #meters{
+        gap: 5px;
+    }
+
+    #services{
+        width: 400px;
+        background-color: red;
+    }
+
+    #serviceDescription{
+        line-height: 18px;
+    }
 }

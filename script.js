@@ -40,7 +40,7 @@ function openSidebar() {
 
 function state() {
 
-    var screen = document.getElementById("myIntro");
+    var screen = document.querySelector(".myIntro");
     if (isInViewPort(screen) && times == 0) {
         times = 1;
         move();
@@ -48,7 +48,7 @@ function state() {
 
     // Animate progress bars when Framework section comes into view
     if (!progressBarAnimated) {
-        var frameworkSections = document.querySelectorAll("#myIntro");
+        var frameworkSections = document.querySelectorAll(".myIntro");
         var lastSection = frameworkSections[frameworkSections.length - 1];
         if (lastSection && isInViewPort(lastSection)) {
             progressBarAnimated = true;
