@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon in ICO format -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +15,6 @@
 </head>
 
 <body>
-
     <div class="loadingScreen" id="loadingScreen">
 
         <div class="loadingAnimation" id="loadingAnimation">
@@ -30,22 +31,20 @@
         <strong id="popUpMessage"> Mail Successfully SENT !</strong>
     </div>
     <div id="container">
-        <div id="navbarHolder">
-            <header>
-                <nav id="navbar">
-                    <ul>
-                        <!-- Home is my intro and skills is My intro -->
-                        <li><a href="#home">My Intro</a></li>
-                        <li><a href="#myIntro">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <img onclick="openSidebar()" id="hamburger" src="images/hamburger.png" alt="ham">
-                    <img onclick="closeSidebar()" id="cross" src="images/cross.png" alt="cross">
-                </nav>
-            </header>
-        </div>
+        <header>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#home">My Intro</a></li>
+                    <li><a href="#myIntro">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <img onclick="openSidebar()" id="hamburger" src="images/hamburger.png" alt="ham">
+                <img onclick="closeSidebar()" id="cross" src="images/cross.png" alt="cross">
+            </nav>
+        </header>
+
         <div id="sidebar">
             <div id="emptyDiv" style="margin-top: 50px;"></div>
             <ul id="list">
@@ -72,16 +71,15 @@
                         </div>
 
                         <div id="fieldBox">
-                            full stack developer
+                            "Retro Aesthetic Paglu 💙"
                         </div>
 
                         <div id="descriptBox">
-                            I Am a developer form a small town in India. Right now looking for job. I have good
-                            knowledge of
-                            html,css,Js,c++,c and python. If you are interested so you can contact me on gmail or
-                            twitter.
-                            If you like this portfolio so drop me a mail. I don't have collage degree or diploma i don't
-                            even have valuable certificates in anything.
+                            I am a full-stack developer with expertise in frontend and backend development, including
+                            server design and API architecture. I have hands-on experience across embedded systems, web
+                            applications, mobile development, and server-side solutions. I have contributed to projects
+                            with industry leaders including TCS and IBM, bringing practical experience and technical
+                            excellence to every endeavor.
                         </div>
 
                         <a id="twitterImage" href="https://twitter.com/hgaur701" target="_blank"><img
@@ -329,59 +327,52 @@
                     <div id="projectsHolder">
 
                         <div class="projectCards">
-
                             <div class="ProjectImage">
-                                <img src="images/porjectImages/cryptoBotImage.gif">
+                                <img src="images/porjectImages/animated-hrb-logo.gif">
                             </div>
                             <div class="projectDetail">
-                                <div class="projectHeader">Python CryptoBot</div>
-                                <div class="projectDis">Discord bot for tracking crypto tokens or NFT prices not only
-                                    crypto. it can track all assets.</div>
+                                <div class="projectHeader">HTML Render Bot</div>
+                                <div class="projectDis">HRB built using JS and it is a Discord bot for rendering HTML &
+                                    CSS from your discord and shearing
+                                    image of the output with friends.
+                                </div>
                             </div>
 
                         </div>
 
                         <div class="projectCards">
                             <div class="ProjectImage">
-                                <img src="images/porjectImages/calculator.gif">
+                                <img src="images/porjectImages/animated-rcma-logo.gif">
                             </div>
                             <div class="projectDetail">
-                                <div class="projectHeader">Calculator</div>
-                                <div class="projectDis">I build this calculator using only html/js/css. Please go check
-                                    these calculator</div>
+                                <div class="projectHeader">Remote Computer Monitor</div>
+                                <div class="projectDis">RCM is built using Go and its a Windows11 64bit software. RCM
+                                    send its PC data through RCMA agent to RCM Mobile App</div>
                             </div>
                         </div>
 
                         <div class="projectCards">
                             <div class="ProjectImage">
-                                <img src="images/porjectImages/snakeGame.gif">
+                                <img src="images/porjectImages/animated-ppe-logo.gif">
                             </div>
                             <div class="projectDetail">
-                                <div class="projectHeader">Snake Game</div>
-                                <div class="projectDis">This Snake Game is purely made in html/js/css. please go and
-                                    play this game and drop a review.</div>
+                                <div class="projectHeader">Panda Police Extension</div>
+                                <div class="projectDis">Panda Police Extension is a simple and lightweight browser
+                                    extension, it blocks websites.
+                                </div>
                             </div>
+
                         </div>
 
                         <div class="projectCards">
                             <div class="ProjectImage">
-                                <img src="images/porjectImages/ecommerce.gif">
+                                <img src="images/porjectImages/animated-plugins-logo.gif">
                             </div>
                             <div class="projectDetail">
-                                <div class="projectHeader">E-Commerce</div>
-                                <div class="projectDis">I Build this E-commerce website only in html/js/css without
-                                    using any external framework please go and check it.</div>
-                            </div>
-                        </div>
-
-                        <div class="projectCards">
-                            <div class="ProjectImage">
-                                <img src="images/porjectImages/web3Image.gif">
-                            </div>
-                            <div class="projectDetail">
-                                <div class="projectHeader">Secret web3 project</div>
-                                <div id="web3Project">This project is absolutely secret and at developing stage. this is
-                                    a nft game. thats all i can tell you right now. </div>
+                                <div class="projectHeader">Neo Vim Plugins</div>
+                                <div class="projectDis">I have created Neo Vim plugins like multi cursor and comment
+                                    Out,
+                                    these plugins are built using Lua.</div>
                             </div>
                         </div>
                     </div>
@@ -395,7 +386,7 @@
                                 alt=""
                                 style="width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:40px;">
                         </div>
-                        <div id="serviceDescription">I can create Discord bot for you.</div>
+                        <div id="serviceDescription">I can Automate your workflow using agents.</div>
                     </div>
                     <div id="screenButtons">
                         <div id="previousButton"></div>

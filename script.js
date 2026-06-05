@@ -7,10 +7,10 @@ var progressBarAnimated = false;
 
 const imageElements = ["<img id=\"image\" src=\"images/serviceScreenImages/serviceBotResized.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:40px;\">", "<img id=\"image\" src=\"images/serviceScreenImages/responsiveWebsite.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:0; margin-top:50px;\"></img>", "<img id=\"image\" src=\"images/serviceScreenImages/web3Service.gif\" alt=\"\" style=\"width:30%; max-width: 15em; min-width: 10em; margin-left:-1em; margin-top:25px;\">"];
 
-const serviceDescription = ["I can create Discord bot for you.", "I can create responsive website for you.", "Service will be available soon."];
+const serviceDescription = ["I can automate your workflow using agents.", "I can create digital platforms for your business", "i can implement Crypto payment solutions."];
 
 
-const projectsLink = ['https://github.com/HarshGaur387R/PythonDiscordBot', 'https://github.com/HarshGaur387R/Calculator', 'https://github.com/HarshGaur387R/Snake-Game', '', ''];
+const projectsLink = ['https://github.com/HarshGaur387R/Html-render-bot', 'https://github.com/HarshGaur387R/Remote-Computer-Monitor', 'https://github.com/HarshGaur387R/Panda-Police-Extension', 'https://github.com/HarshGaur387R/Ez-comment-out', ''];
 
 window.addEventListener('load', (e) => {
     document.getElementById('loadingScreen').style.display = 'none';
